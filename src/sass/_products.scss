@@ -44,9 +44,12 @@ color: #D41443;
     margin: 0 auto;
     position: relative;
     width: 280px;
-    
+    height: 489px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
    
-    padding-top: 160px;
+    
     padding-right: 40px;
     padding-left: 40px;
     padding-bottom: 40px;
@@ -57,13 +60,13 @@ color: #D41443;
     }
     @include tablet{
         width: 224px;
-        padding-top: 118px;
+       
         padding-right: 32px;
         padding-left: 32px;
     }
     @include desktop{
         width: 368px;
-        padding-top: 165px;
+       
         padding-right: 63.5px;
         padding-left: 63.5px;
         padding-bottom: 60px;
