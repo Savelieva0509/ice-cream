@@ -5,6 +5,7 @@
 .ingredients {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
 
   &__item:not(:last-child) {
     margin-bottom: 32px;
@@ -16,7 +17,7 @@
     height: 56px;
     font-weight: 400;
     font-size: 36px;
-    line-height: calc(36 / 41);
+    line-height: calc(41 / 36);
     letter-spacing: 0.04em;
     text-transform: uppercase;
     margin-bottom: 4px;
