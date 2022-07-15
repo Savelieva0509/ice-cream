@@ -1,5 +1,4 @@
-.is-hidden {
-
+.visually-hidden {
     position: absolute;
     white-space: nowrap;
     width: 1px;
@@ -12,3 +11,8 @@
     margin: -1px;
 }
 
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
