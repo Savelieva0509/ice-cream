@@ -1,0 +1,127 @@
+.rewiews {
+  @include font(500, 12px, 2.58, 0);
+  color: var(--description-title-color);
+  text-align: center;
+}
+
+.rewiews-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.rewiews-slider__wrap {
+  margin-bottom: 16px;
+}
+
+.rewiew-card {
+  @media screen and (max-width: 320px) {
+    max-width: 100%;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rewiew-card__image {
+  margin: 0 auto 62px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.rewiew-card__wrap {
+  position: relative;
+  z-index: -2;
+  max-width: 100%;
+  min-height: 217px;
+  padding: 0 12px;
+  margin-bottom: 34px;
+  background-image: repeating-linear-gradient(
+    #ffffff,
+    #ffffff 30px,
+    #e1e1e1 30px,
+    #e1e1e1 31px
+  );
+}
+
+.rewiew-card__text {
+  margin: 0 auto;
+  padding: 0 6px;
+  max-width: 157px;
+  text-indent: 3px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -13px;
+    left: 4px;
+    display: inline-block;
+
+    width: 54px;
+    height: 40px;
+
+    background-image: url(../images/quotes-54.png);
+
+    @include retina {
+      background: url(../images/quotes-108.png);
+      background-size: cover;
+    }
+  }
+}
+
+.rewiew-card__subtitle {
+  @include font(500, 14px, 1.86, null);
+  color: var(--description-title-color);
+
+  &::before {
+    content: '';
+    margin: 0 auto 20px;
+    display: block;
+
+    width: 32px;
+    height: 4px;
+
+    background-image: radial-gradient(
+      circle at center,
+      var(--accent-text-color) 2px,
+      transparent 2px
+    );
+    background-size: 12px 4px;
+    background-position: 50% 50%;
+  }
+}
+
+.swiper-pagination {
+  position: static;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+
+  background: #d9d9d9;
+  opacity: 1;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 8px;
+}
+
+.swiper-pagination-bullet-active {
+  border-radius: 0;
+  background: url(../images/home-12.4.png);
+
+  @include retina {
+    background: url(../images/home-24.8.png);
+    background-size: cover;
+  }
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: var(--accent-text-color);
+  font-size: 50px;
+}

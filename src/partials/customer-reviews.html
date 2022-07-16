@@ -1,22 +1,74 @@
 <section class="rewiews">
   <div class="container">
-    <h2 class="rewiews__title is-hidden">Customer Reviews</h2>
-    <article>
-      <img
-        srcset="
-          ./images/testimonials-first-85.png  1x,
-          ./images/testimonials-first-170.png 2x
-        "
-        src="./images/testimonials-first-85.png"
-        alt="first user"
-        class="rewiews__image"
-      />
-      <p class="rewiews__text">
-        Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam
-        sem. In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis
-        in nibh vel risus.
-      </p>
-      <p class="rewiews__subtitle">Emily, Los Angeles</p>
-    </article>
+    <h2 class="rewiews__title visually-hidden">Customer Reviews</h2>
+
+    <div class="rewiews-slider swiper-container">
+      <div class="rewiews-slider__wrap swiper-wrapper">
+        <article class="rewiew-card swiper-slide">
+          <img
+            srcset="
+              ./images/testimonials-first-85.png  1x,
+              ./images/testimonials-first-170.png 2x
+            "
+            src="./images/testimonials-first-85.png"
+            alt="first user"
+            class="rewiew-card__image"
+          />
+          <div class="rewiew-card__wrap">
+            <p class="rewiew-card__text">
+              Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
+              Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem
+              ipsum primis in nibh vel risus.
+            </p>
+          </div>
+          <p class="rewiew-card__subtitle">Emily, Los Angeles</p>
+        </article>
+
+        <article class="rewiew-card swiper-slide">
+          <img
+            srcset="
+              ./images/testimonials-second-85.png  1x,
+              ./images/testimonials-second-170.png 2x
+            "
+            src="./images/testimonials-second-85.png"
+            alt="first user"
+            class="rewiew-card__image"
+          />
+          <div class="rewiew-card__wrap">
+            <p class="rewiew-card__text">
+              Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
+              Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem
+              ipsum primis in nibh vel risus.
+            </p>
+          </div>
+          <p class="rewiew-card__subtitle">Emily, Los Angeles</p>
+        </article>
+
+        <article class="rewiew-card swiper-slide">
+          <img
+            srcset="
+              ./images/testimonials-third-85.png  1x,
+              ./images/testimonials-third-170.png 2x
+            "
+            src="./images/testimonials-third-85.png"
+            alt="first user"
+            class="rewiew-card__image"
+          />
+          <div class="rewiew-card__wrap">
+            <p class="rewiew-card__text">
+              Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
+              Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem
+              ipsum primis in nibh vel risus.
+            </p>
+          </div>
+          <p class="rewiew-card__subtitle">Emily, Los Angeles</p>
+        </article>
+      </div>
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <div class="swiper-pagination"></div>
+    </div>
   </div>
 </section>
