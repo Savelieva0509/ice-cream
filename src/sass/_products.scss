@@ -6,30 +6,52 @@
 .products__label{
     margin-bottom: 15px;
 
-    font-family: 'Titan One';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 1.16;
+// font-family: 'Titan One';
+// font-style: normal;
+// font-weight: 400;
+// font-size: 18px;
+// line-height: 1.16;
+
+font-family: var(--accent-font-family);
+@include font(400, 18px,1.16, null);
+
 text-align: center;
 text-transform: uppercase;
 color: #FFA5BA;
+
+@include tablet{
+  @include font(null, 26px, 1.15, null);
+
+}
+
+@include desktop{
+    @include font(null, 30px, 1.13, null);
+}
 
 }
 .products__header{
     margin-bottom: 148px;
 
-    font-family: 'Titan One';
-font-style: normal;
-font-weight: 400;
-font-size: 34px;
-line-height: 1.14;
+font-family: var(--accent-font-family);
+@include font(null, 34px, 1.14, null);
+
+// font-family: 'Titan One';
+// font-style: normal;
+// font-weight: 400;
+// font-size: 34px;
+// line-height: 1.14;
+// letter-spacing: 0.04em;
+
 text-align: center;
-letter-spacing: 0.04em;
 text-transform: uppercase;
 color: #D41443;
+
+@include tablet{
+  @include font(null, 48px, 1.15, null);
+}
 @include desktop{
     margin-bottom: 281px;
+     @include font(null, 58px, 1.14, 0.06em);
 }
 
 }
@@ -247,10 +269,7 @@ margin: 0 auto;
 .products__button:focus .products__arrow{
     fill: #D41443  ;
   }
-  .products__item{
-    position: relative;
   
-  }
   .products__animation{
     // padding-top: 15px;
     // padding-right: 15px;
