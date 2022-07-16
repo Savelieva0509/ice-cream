@@ -151,7 +151,17 @@
     }
 }
 
+.social-address-tel {
+    
+    @include tablet {
+        padding-top: 60px;
+    }
 
+    @include desktop {
+        padding-top: 12px;
+    }
+
+}
 
 .social-address__list {
     display: flex;
