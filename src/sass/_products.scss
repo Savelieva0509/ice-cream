@@ -1,4 +1,3 @@
-
 .products__container{
     padding-top: 60px;
     padding-bottom: 60px;
@@ -44,7 +43,8 @@ color: #D41443;
     margin: 0 auto;
     position: relative;
     width: 280px;
-    height: 489px;
+    // height: 489px;
+    
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -58,7 +58,11 @@ color: #D41443;
         max-width: 100%;
         
     }
+    @include mobile{
+        height: 489px;
+    }
     @include tablet{
+        
         width: 224px;
        
         padding-right: 32px;
@@ -71,6 +75,10 @@ color: #D41443;
         padding-left: 63.5px;
         padding-bottom: 60px;
         
+    }
+    @media screen and (max-width:319.98px) {
+    
+        padding-top: 160px;
     }
     
 
@@ -235,3 +243,90 @@ margin: 0 auto;
     height: 40px;
     fill: #FFFFFF;
 }
+.products__button:hover .products__arrow,
+.products__button:focus .products__arrow{
+    fill: #D41443  ;
+  }
+  .products__item{
+    position: relative;
+  
+  }
+  .products__animation{
+    // padding-top: 15px;
+    // padding-right: 15px;
+    // padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    height: calc(100% - 72px);
+    width: 200px;
+    
+    border-radius:5px ;
+    
+    transform: translatex(-200%);
+    transition: transform 350ms linear;
+    .products__button:hover + &,
+    .products__button:focus + &{
+      transform: translate(0);
+    }
+    @include tablet{
+      width: 160px;
+      
+    }
+    @include desktop{
+      width: 241px;
+      
+    }
+    
+  }
+  .products__thumb{
+    position: relative;
+    overflow: hidden;
+    
+  }
+  .products__animation--pink{
+    background-color: rgb(244, 138, 164);
+  }
+  .products__animation--brown{
+    background-color: #dfb981;;
+  }
+  
+  .products__animation--green{
+    background-color: #adce81;
+  }
+  .products__ingredients{
+    padding: 0;
+    margin: 0;
+    margin-bottom: 15px;
+    font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  
+  color: #FFFFFF;
+  
+  }
+ 
+  .composition__item{
+    
+    font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.76;
+  /* or 25px */
+  
+  text-align: center;
+  letter-spacing: 0.04em;
+  
+  color: #FFFFFF;
+  
+  
+  }
