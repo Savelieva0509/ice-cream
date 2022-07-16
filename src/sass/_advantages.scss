@@ -2,6 +2,8 @@
   background-color: var(--background-middle-color);
 }
 .ingredients {
+  padding: 0;
+  margin: 0;
   list-style: none;
   @media screen and (min-width: 768px) {
     & {
@@ -26,8 +28,8 @@
   }
   &__title {
     font-family: var(--accent-font-family);
-    width: 98px;
-    height: 56px;
+    width: 100%;
+
     font-weight: 400;
     font-size: 36px;
     line-height: calc(41 / 36);
@@ -36,9 +38,21 @@
     margin-bottom: 4px;
     color: var(--accent-text-color);
   }
+  @media screen and (min-width: 320px) {
+    &__title {
+      margin-bottom: 16px;
+      font-size: 58px;
+      width: 98px;
+      height: 65px;
+      line-height: calc(66 / 58);
+      text-transform: none;
+    }
+  }
   @media screen and (min-width: 768px) {
     &__title {
       margin-bottom: 13px;
+      width: 98px;
+      height: 56px;
       font-size: 48px;
       line-height: calc(55 / 48);
       text-transform: none;
@@ -55,12 +69,20 @@
   }
   &__text {
     font-family: var(--second-font-family);
-    max-width: 230px;
+
     font-weight: 700;
     font-size: 12px;
     line-height: calc(20 / 12);
 
     color: var(--description-title-color);
+  }
+  @media screen and (min-width: 320px) {
+    &__text {
+      width: 230px;
+      font-size: 16px;
+      line-height: calc(28 / 16);
+      letter-spacing: 0.02em;
+    }
   }
   @media screen and (min-width: 768px) {
     &__text {
