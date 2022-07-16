@@ -1,0 +1,125 @@
+// @mixin font($fw, $fs, $lh, $ls) {
+// 	font-weight: $fw;
+// 	font-size: $fs;
+// 	line-height: $lh;
+// 	letter-spacing: $ls;
+// }
+
+// :root {
+// 	--accent-font-family: 'Titan One';
+// 	--second-font-family: 'DM Sans', sans-serif;
+
+// 	--accent-text-color: #D41443;
+// 	--middle-accent-text-color: #FFA5BA;
+// 	--main-text-color: #FFFFFF;
+// 	--description-title-color: #000000;
+// 	--description-text-color: #907E82;
+
+// 	--background-main-color: #FFB8CA;
+// 	--background-middle-color: #FFF5F6;
+
+  
+// 	--timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+// }
+
+.hero {
+	background-color: var(--background-main-color);
+	overflow: hidden;
+}
+
+
+.hero-titel {
+	font-family: var(--accent-font-family);
+	font-style: normal;
+	font-weight: 400;
+	font-size: 26px;
+	line-height: 1.15;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+
+	color: var(--main-text-color);
+
+	&__word {
+		font-family: var(--accent-font-family);
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 0.96;
+text-transform: uppercase;
+
+color: var(--accent-text-color);
+	}
+}
+
+.hero-btn {
+	text-decoration: none;
+	display: inline-block;
+	padding-top: 7px;
+	width: 62px;
+	height: 24px;
+	border-radius: 20px;
+	background-color: var(--accent-text-color);
+
+	font-family: 'DM Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 8px;
+	line-height: 1.25;
+	text-align: center;
+	margin-right: 8px;
+
+	color: #FFFFFF;
+}
+
+.secondary {
+	background-color: var(--main-text-color);
+	color: var(--accent-text-color);
+	width: 83px;
+}
+
+.hero-container {
+	position: relative;
+	padding-top: 136px;
+	padding-bottom: 158px;
+	z-index: 5;
+}
+
+.circle {
+	position: absolute;
+	top: 25px;
+	left: 36px;
+	width: 346px;
+	height: 344px;
+
+	background: var(--middle-accent-text-color);
+	border-radius: 50%;
+	z-index: -2;
+}
+
+.hero-block__ice {
+	position: absolute;
+	left: 119px;
+	top: 34px;
+	z-index: -1;
+	
+}
+
+
+
+.hero-block__list {
+	display: none;
+}
+
+.fish {
+	display: none;
+}
+
+.hero-block__milk {
+	display: none;
+}
+
+.hero-block__girl {
+	display: none;
+}
+
