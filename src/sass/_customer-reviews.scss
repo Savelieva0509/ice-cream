@@ -1,4 +1,5 @@
 .rewiews {
+  font-family: 'DM Sans';
   @include font(500, 12px, 2.58, 0);
   color: var(--description-title-color);
   text-align: center;
@@ -11,12 +12,14 @@
 
 .rewiews-slider__wrap {
   margin-bottom: 16px;
+
+  @include tablet {
+    margin-bottom: 32px;
+  }
 }
 
 .rewiew-card {
-  @media screen and (max-width: 320px) {
-    max-width: 100%;
-  }
+  max-width: 100%;
 
   display: flex;
   flex-direction: column;
@@ -28,6 +31,10 @@
   max-width: 100%;
   height: auto;
   display: block;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
 }
 
 .rewiew-card__wrap {
@@ -35,18 +42,27 @@
   z-index: -2;
   max-width: 100%;
   min-height: 217px;
-  padding: 0 12px;
   margin-bottom: 34px;
+
+  display: flex;
+  justify-content: center;
+
   background-image: repeating-linear-gradient(
     #ffffff,
-    #ffffff 30px,
+    #ffffff 29px,
     #e1e1e1 30px,
-    #e1e1e1 31px
+    #e1e1e1 30px
   );
+
+  @include tablet {
+    width: 608px;
+    min-height: 94px;
+    margin-bottom: 40px;
+  }
 }
 
 .rewiew-card__text {
-  margin: 0 auto;
+  position: relative;
   padding: 0 6px;
   max-width: 157px;
   text-indent: 3px;
@@ -56,7 +72,7 @@
     position: absolute;
     z-index: -1;
     top: -13px;
-    left: 4px;
+    left: -8px;
     display: inline-block;
 
     width: 54px;
@@ -68,17 +84,42 @@
       background: url(../images/quotes-108.png);
       background-size: cover;
     }
+
+    @include tablet {
+      top: -17px;
+      left: -44px;
+      width: 60.35px;
+      height: 40px;
+
+      background-image: url(../images/quotes-60.png);
+
+      @include retina {
+        background: url(../images/quotes-120.png);
+        background-size: cover;
+      }
+    }
+  }
+
+  @include tablet {
+    max-width: 100%;
+    width: 516px;
+    padding: 0;
+    @include font(null, 14px, 2.16, 0.04em);
   }
 }
 
 .rewiew-card__subtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   @include font(500, 14px, 1.86, null);
   color: var(--description-title-color);
 
   &::before {
     content: '';
-    margin: 0 auto 20px;
     display: block;
+    margin-bottom: 20px;
 
     width: 32px;
     height: 4px;
@@ -90,11 +131,16 @@
     );
     background-size: 12px 4px;
     background-position: 50% 50%;
+
+    @include tablet {
+      margin-bottom: 16px;
+    }
   }
 }
 
 .swiper-pagination {
   position: static;
+  line-height: 1;
 }
 
 .swiper-pagination-bullet {
@@ -122,6 +168,11 @@
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
+  display: none;
   color: var(--accent-text-color);
   font-size: 50px;
+
+  @include tablet {
+    display: block;
+  }
 }
