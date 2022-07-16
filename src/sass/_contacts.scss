@@ -2,6 +2,13 @@
     font-family: DM Sans, sans-serif;
     padding-top: 60px;
     outline: 2px solid blue;
+    background-image: linear-gradient(
+        to bottom,
+        var(--main-text-color) 0%,
+        var(--main-text-color) 26%,
+        var(--background-middle-color) 26%,
+        var(--background-middle-color) 100%
+        );
 }
 
 .contacts-list {
@@ -13,6 +20,7 @@
     padding: 40px 32px;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
+    background-color: var(--main-text-color);
 
     &+& {
         margin-top: 20px;
@@ -83,44 +91,45 @@
     }
 }
 
-.big-button {
-    @include font(700, 16px, 1.3, null);
-    text-align: center;
-    border-radius: 22px;
-    min-width: 161px;
-    display: block;
+.contacts-modal {
+    background: #FFFFFF;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 4px;
+    padding: 40px;
+    position: relative;
+    overflow-y: auto;
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    max-width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.contacts-modal__close-btn {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--middle-accent-text-color);
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    top: 8px;
+    right: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 17px;
+    padding: 0;
+    color:var(--accent-text-color);
     
-}
-
-.big-button--primary {
-    color: var(--main-text-color);
-    background-color: var(--background-accent-button-color);
-    margin-bottom: 10px;
-    margin-left: auto;
-    margin-right: auto;
-
-
-    & .big-buttom__icon {
-        fill: var(--main-text-color);
+    transition: fill 250ms var(--timing-function);
+    
+    &:hover,
+    &:focus {
+        background-color: var(--middle-accent-text-color) ;
     }
 }
-
-.big-button--secondary {
-    color: var(--accent-text-color);
-    background-color: #ffffff;
-
-    margin-left: auto;
-        margin-right: auto;
-
-    & .big-buttom__icon {
-        fill: var(--accent-text-color);
-    }
-}
-
-.big-buttom__icon {
-    margin-left: 8px;
+.contacts-modal__close-icon {
+    fill: currentColor;
 }
