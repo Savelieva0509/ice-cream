@@ -32,8 +32,8 @@
   stroke: var(--accent-text-color);
   transition: stroke 250ms var(--timing-function);
 
-  &:hover,
-  &:focus {
+  .menu__open-btn:hover &,
+  .menu__open-btn:focus & {
     stroke: var(--main-text-color);
   }
 }
@@ -72,8 +72,8 @@
   stroke: var(--main-text-color);
   transition: stroke 250ms var(--timing-function);
 
-  &:hover,
-  &:focus {
+  .menu__close-btn:hover &,
+  .menu__close-btn:focus & {
     stroke: var(--accent-text-color);
   }
 }
@@ -81,7 +81,9 @@
 .menu__btn {
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
   width: 168px;
   height: 44px;
   margin-bottom: 20px;
@@ -132,4 +134,12 @@
   &:focus {
     color: var(--accent-text-color);
   }
+}
+
+.current {
+  color: var(--accent-text-color);
+}
+
+.menu__link:focus.current {
+  color: var(--main-text-color);
 }
