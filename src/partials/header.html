@@ -1,1 +1,43 @@
-<header class="header"> Test</header>
+<header class="header">
+  <div class="container">
+    <div class="header__container">
+      <a href="" class="header__logo link">
+        <svg class="logo__icon" width="200" height="50">
+          <use href="./images/sprite.svg#icon-logo"></use>
+        </svg>
+      </a>
+      <button type="button" class="menu__open-btn js-open-menu" aria-expanded="false" aria-controls="open-menu">
+        <svg class="menu__open-icon" width="20" height="12">
+          <use href="./images/sprite.svg#icon-open-menu"></use>
+        </svg>
+      </button>
+    </div>
+    
+  </div>
+  <!-- <div class="backdrop is-hidden"> -->
+      <div class="menu-container js-menu-container" id="modal-menu">
+        <button type="button" class="menu__close-btn js-close-menu">
+          <svg class="menu__close-icon" width="14" height="14">
+            <use href="./images/sprite.svg#icon-close-menu"></use>
+          </svg>
+        </button>
+        <button type="button" class="menu__btn">Buy now</button>
+        <ul class="menu__list list">
+          <li class="menu__item">
+            <a class="menu__link link " href="#hero">Home</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link link" href="#advantages">About us</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link link" href="#about">How it’s made?</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link link" href="#products">Our products</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link link" href="#contacts">Contact</a>
+          </li>
+        </ul>
+      <!-- </div> -->
+</header>
