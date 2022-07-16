@@ -1,4 +1,4 @@
-// Swiper initialisation
+// Swiper initialisation and setup
 new Swiper('.rewiews-slider', {
   navigation: {
     nextEl: '.swiper-button-next',
@@ -8,6 +8,21 @@ new Swiper('.rewiews-slider', {
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
+  },
+
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true,
+  },
+
+  spaceBetween: 30,
+  speed: 1000,
+
+  effect: 'flip',
+  flipEffect: {
+    slideShadows: true,
+    limitRotation: true,
   },
 });
 

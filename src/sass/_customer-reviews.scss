@@ -3,6 +3,7 @@
   @include font(500, 12px, 2.58, 0);
   color: var(--description-title-color);
   text-align: center;
+  background: #ffffff;
 }
 
 .rewiews-slider {
@@ -38,7 +39,6 @@
 }
 
 .rewiew-card__wrap {
-  position: relative;
   z-index: -2;
   max-width: 100%;
   min-height: 217px;
@@ -50,7 +50,7 @@
   background-image: repeating-linear-gradient(
     #ffffff,
     #ffffff 29px,
-    #e1e1e1 30px,
+    #e1e1e1 29px,
     #e1e1e1 30px
   );
 
@@ -59,11 +59,17 @@
     min-height: 94px;
     margin-bottom: 40px;
   }
+
+  @include desktop {
+    width: 822px;
+    min-height: 78px;
+    margin-bottom: 47px;
+  }
 }
 
 .rewiew-card__text {
   position: relative;
-  padding: 0 6px;
+  padding: 0;
   max-width: 157px;
   text-indent: 3px;
 
@@ -85,7 +91,7 @@
       background-size: cover;
     }
 
-    @include tablet {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
       top: -17px;
       left: -44px;
       width: 60.35px;
@@ -98,6 +104,11 @@
         background-size: cover;
       }
     }
+
+    @include desktop {
+      top: -15px;
+      left: -37px;
+    }
   }
 
   @include tablet {
@@ -105,6 +116,13 @@
     width: 516px;
     padding: 0;
     @include font(null, 14px, 2.16, 0.04em);
+  }
+
+  @include desktop {
+    max-width: 100%;
+    width: 750px;
+    padding: 0;
+    @include font(null, 16px, 1.86, null);
   }
 }
 
@@ -135,6 +153,14 @@
     @include tablet {
       margin-bottom: 16px;
     }
+  }
+
+  @include tablet {
+    @include font(null, 16px, 1.86, null);
+  }
+
+  @include desktop {
+    font-size: 20px;
   }
 }
 
@@ -169,10 +195,12 @@
 .swiper-button-next::after,
 .swiper-button-prev::after {
   display: none;
+  pointer-events: none;
   color: var(--accent-text-color);
   font-size: 50px;
 
   @include tablet {
     display: block;
+    pointer-events: all;
   }
 }
