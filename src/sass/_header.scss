@@ -26,6 +26,10 @@
   outline: none;
   display: block;
   margin-left: auto;
+
+  @media screen and (min-width: 767.98px) {
+      display: none;
+    }
 }
 
 .menu__open-icon {
