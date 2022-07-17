@@ -9,6 +9,15 @@ new Swiper('.rewiews-slider', {
     el: '.swiper-pagination',
     clickable: true,
   },
+
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true,
+  },
+
+  speed: 1000,
+  autoheight: true,
 });
 
 
@@ -17,20 +26,19 @@ new Swiper('.rewiews-slider', {
 
 (() => {
   const refs = {
-    openLocationBtn: document.querySelector("[data-location-open]"),
-    closeLocation: document.querySelector("[data-location-close]"),
-    location: document.querySelector("[data-location]"),
+    openLocationBtn: document.querySelector('[data-location-open]'),
+    closeLocation: document.querySelector('[data-location-close]'),
+    location: document.querySelector('[data-location]'),
   };
 
-  refs.openLocationBtn.addEventListener("click", toggleLocation);
-  refs.closeLocationBtn.addEventListener("click", toggleLocation);
+  refs.openLocationBtn.addEventListener('click', toggleLocation);
+  refs.closeLocationBtn.addEventListener('click', toggleLocation);
 
   function toggleLocation() {
-    refs.location.classList.toggle("is-hidden");
+    refs.location.classList.toggle('is-hidden');
     refs.body.classList.toggle('no-scroll');
   }
-
-  })();
+})();
 
 
 // mob-menu
