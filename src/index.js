@@ -20,8 +20,6 @@ new Swiper('.rewiews-slider', {
   autoheight: true,
 });
 
-
-
 // SCRIPT_CONTACTS_MODAL_LOCATION
 
 (() => {
@@ -39,7 +37,6 @@ new Swiper('.rewiews-slider', {
     refs.body.classList.toggle('no-scroll');
   }
 })();
-
 
 // mob-menu
 (() => {

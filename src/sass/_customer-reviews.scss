@@ -29,24 +29,53 @@
 }
 
 .rewiew-card__image {
-  margin: 0 auto 62px;
+  margin: 0 auto 32px;
   max-width: 100%;
   height: auto;
   display: block;
 
   @include tablet {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 }
 
 .rewiew-card__wrap {
-  z-index: -2;
-  max-width: 100%;
-  min-height: 220px;
-  margin-bottom: 34px;
+  position: relative;
+  z-index: -3;
 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  width: 280px;
+  min-height: 308px;
+  margin-bottom: 16px;
+
+  background: #fafafa;
+
+  @include tablet {
+    width: 620px;
+    min-height: 164px;
+    margin-bottom: 4px;
+  }
+
+  @include desktop {
+    width: 968px;
+    min-height: 138px;
+    margin-bottom: 16px;
+  }
+}
+
+.rewiew-card__text {
+  position: relative;
+  z-index: -2;
+
+  margin-top: 44px;
+  padding: 0 8px 0 16px;
+
+  max-width: 100%;
+  min-height: 248px;
+  width: 180px;
 
   background-image: repeating-linear-gradient(
     #ffffff,
@@ -55,33 +84,15 @@
     #e1e1e1 31px
   );
 
-  @include tablet {
-    width: 608px;
-    min-height: 94px;
-    margin-bottom: 40px;
-  }
-
-  @include desktop {
-    width: 822px;
-    min-height: 78px;
-    margin-bottom: 47px;
-  }
-}
-
-.rewiew-card__text {
-  position: relative;
-  padding: 0;
-  max-width: 157px;
-  text-indent: 3px;
-
   &::before {
     content: '';
     position: absolute;
     z-index: -1;
     top: -13px;
-    left: -8px;
+    left: 3px;
     display: inline-block;
 
+    max-width: 100%;
     width: 54px;
     height: 40px;
 
@@ -94,7 +105,7 @@
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
       top: -17px;
-      left: -44px;
+      left: 0px;
       width: 60.35px;
       height: 40px;
 
@@ -108,21 +119,21 @@
 
     @include desktop {
       top: -15px;
-      left: -37px;
+      left: 0px;
     }
   }
 
   @include tablet {
-    max-width: 100%;
-    width: 516px;
-    padding: 0;
+    width: 608px;
+    min-height: 93px;
+    padding: 0 50px 0 44px;
     @include font(null, 14px, 2.16, 0.04em);
   }
 
   @include desktop {
-    max-width: 100%;
-    width: 750px;
-    padding: 0;
+    width: 821px;
+    min-height: 62px;
+    padding: 0 36px;
     @include font(null, 16px, 1.86, null);
   }
 }
@@ -195,12 +206,6 @@
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  display: none;
-  pointer-events: none;
   color: var(--accent-text-color);
   font-size: 50px;
-
-  @include tablet {
-    display: block;
-  }
 }
