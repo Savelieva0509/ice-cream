@@ -194,6 +194,8 @@
         }
 }
 
+// BACKDROP
+
 .backdrop {
     position: fixed;
     top: 0;
@@ -214,11 +216,13 @@
     pointer-events: none;
 }
 
+// MODAL-COMMON-STYLES
+
 .contacts-modal {
-    background: #FFFFFF;
+    background: var(--background-middle-color);
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 4px;
-    padding: 40px;
+    padding: 60px 0;
     position: relative;
     overflow-y: auto;
 
@@ -226,9 +230,49 @@
                 opacity 250ms var(--timing-function),
                 visibility 250ms var(--timing-function);
 
-    max-width: 450px;
+    max-width: 550px;
+    height: auto;
     margin-right: auto;
     margin-left: auto;
+
+    @include tablet {
+            transform: translate(-50%, -50%) scale(1) rotateZ(360deg);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 550px;
+            max-width: 550px;
+        }
+    
+        @include desktop {
+            width: 800px;
+            max-width: 800px;
+        }
+    
+        .backdrop.is-hidden & {
+            transform: translate(-50%, -50%) scale(0.4) rotateZ(270deg);
+        }
+    >.container  {
+        @include tablet {
+            width: 550px;
+        } 
+
+        @include desktop{
+            width: 800px;
+        }
+    }
+}
+
+// MODAL-LOCATION
+
+.contacts-modal__title {
+    font-family: 'Titan One';
+    @include font(400, 22px, 1.1, 0.04em);
+    text-align: center;
+    text-transform: uppercase;
+    
+    color: var(--middle-accent-text-color);
+    margin-bottom: 40px;
 }
 
 .contacts-modal__close-btn {
@@ -245,7 +289,7 @@
     justify-content: center;
     padding: 0;
     color:var(--accent-text-color);
-    
+
     transition: fill 250ms var(--timing-function);
     
     &:hover,
@@ -258,14 +302,30 @@
     fill: currentColor;
 }
 
+.contacts-list-modal {
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+.contacts-list__item--modal {
+    margin: 0;
+
+@include tablet {
+    width: calc((100% - 30px)/3);
+    padding:15px
+    }
+}
+
 .contacts-list__photo {
     display: block;
-    height: auto;
     max-width: 100%;
     width: 100%;
     border-radius: 4px;
     margin-bottom: 25px;
-    height: auto;
+    
 }
 
 .feedback-list__link--modal {
@@ -278,3 +338,67 @@
     fill: currentColor;
 }
 
+// MODAL-FRANCHISE
+
+.franchise-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.franchise-list__item {
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+    background-color: var(--main-text-color);
+    width: calc((100% - 15px)/2);
+    padding: 15px;
+    text-align: left;
+
+    @include tablet {
+        width: calc((100% - 30px)/3);
+    }
+}
+
+.franchise-list__icon {
+    fill: var(--middle-accent-text-color);
+    margin-bottom: 16px;
+
+    @include tablet {
+           width: 40px;
+           height: 40px;
+        }
+    
+        @include desktop {
+            width: 45px;
+            height: 45px;
+        }
+}
+
+.franchise-list__values {
+    font-family: Titan One, sans-serif;
+    @include font(null, 14px, 1.1, 0.04em);
+    color: var(--accent-text-color);
+    margin-bottom: 16px;
+    
+        @include tablet {
+            @include font(500, 16, 1.8, 0.04em);
+        }
+    
+        @include desktop {
+            @include font(500, 18, 1.8, 0.04em);
+        }
+}
+
+.franchise-list__text {
+    @include font(700, 12px, 1.7, 0.04em);
+    
+    color:var(--description-title-color);
+
+    @include tablet {
+            @include font(500, 14, 1.8, 0.04em);
+        }
+    
+        @include desktop {
+            @include font(500, 16, 1.8, 0.04em);
+        }
+}

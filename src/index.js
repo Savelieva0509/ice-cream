@@ -21,10 +21,29 @@ new Swiper('.rewiews-slider', {
   };
 
   refs.openLocationBtn.addEventListener("click", toggleLocation);
-  refs.closeLocationBtn.addEventListener("click", toggleLocation);
+  refs.openLocationBtn.addEventListener("click", toggleLocation);
 
   function toggleLocation() {
     refs.location.classList.toggle("is-hidden");
     refs.body.classList.toggle('no-scroll');
   }
 })();
+
+// SCRIPT_CONTACTS_MODAL_FRANCHISE
+
+(() => {
+  const refs = {
+    openFranchiseBtn: document.querySelector("[data-franchise-open]"),
+    closeFranchise: document.querySelector("[data-franchise-close]"),
+    franchise: document.querySelector("[data-franchise]"),
+  };
+
+  refs.openFranchiseBtn.addEventListener("click", toggleFranchise);
+  refs.openFranchiseBtn.addEventListener("click", toggleFranchise);
+
+  function toggleFranchise() {
+    refs.franchise.classList.toggle("is-hidden");
+    refs.body.classList.toggle('no-scroll');
+  }
+})();
+
