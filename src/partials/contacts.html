@@ -81,7 +81,7 @@
                 </ul>
             </li>
         </ul>
-        <button type="button" class="big-button big-button--primary button">Our Locations
+        <button type="button" class="big-button big-button--primary button" data-location-open >Our Locations
             <svg class="big-buttom__icon" width="10" height="16">
                 <use href="./images/sprite.svg#icon-big-button"></use>
             </svg>
@@ -93,3 +93,68 @@
         </button>
     </div>
 </section>
+
+<div class="backdrop is-hidden" data-location>
+    <div class="contacts-modal">
+        <button type="button" class="contacts-modal__close-btn button" data-location-close>
+            <svg class="contacts-modal__close-icon" width="18" height="18">
+                <use href="./images/sprite.svg#icon-close"></use>
+            </svg>
+        </button>
+
+        <ul class="contacts-list list">
+            <li class="contacts-list__item">
+                <img class="contacts-list__photo" 
+                src="./images/cafe-chicago-1px.jpg" 
+                alt="фото кафе" width="270">
+
+
+                <div class="contacts-list__content">
+                    <p class="contacts-list__category contacts-list__category--rose"> CAFE</p>
+                    <p class="contacts-list__city">Chicago</p>
+                    <a href="https://www.google.com.ua/maps/place/King+Drive+%26+37th+Street/@41.8275199,-87.6192574,17z/data=!3m1!4b1!4m13!1m7!3m6!1s0x880e2c3cd0f4cbed:0xafe0a6ad09c0c000!2z0KfQuNC60LDSkdC-LCDQhtC70LvRltC90L7QudGBLCDQodC_0L7Qu9GD0YfQtdC90ZYg0KjRgtCw0YLQuCDQkNC80LXRgNC40LrQuA!3b1!8m2!3d41.8781136!4d-87.6297982!3m4!1s0x880e2bf7b0d64fff:0x450e50f2488cc9cc!8m2!3d41.8275199!4d-87.6170687?hl=uk&authuser=0" 
+                    class="feedback-list__link feedback-list__link--modal link">
+                    <svg class="contacts-list__icon-map" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-maps"></use>
+                    </svg>
+                        King Drive & 37th Street</a>
+                </div>
+            </li>
+            <li class="contacts-list__item">
+                <img class="contacts-list__photo" 
+                
+                src="./images/foodtruck-la-1px.jpg" 
+                alt="фото кафе" width="270">
+                
+                <div class="contacts-list__content">
+                    <p class="contacts-list__category contacts-list__category--green">FOODTRUCK</p>
+                    <p class="contacts-list__city">Los Angeles</p>
+                    <a href="https://www.google.com.ua/maps/place/3123+S+Grand+Ave,+Los+Angeles,+CA+90007,+%D0%A1%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D1%96+%D0%A8%D1%82%D0%B0%D1%82%D0%B8+%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B8/@34.0219638,-118.2759125,20.7z/data=!4m13!1m7!3m6!1s0x80c2c75ddc27da13:0xe22fdf6f254608f4!2z0JvQvtGBLdCQ0L3QtNC20LXQu9C10YEsINCa0LDQu9GW0YTQvtGA0L3RltGPLCDQodC_0L7Qu9GD0YfQtdC90ZYg0KjRgtCw0YLQuCDQkNC80LXRgNC40LrQuA!3b1!8m2!3d34.0522342!4d-118.2436849!3m4!1s0x80c2c7de2c6ccc79:0xbe03e7df22c46c80!8m2!3d34.0217909!4d-118.2756307?hl=uk&authuser=0"
+                    class="feedback-list__link link feedback-list__link--modal">
+                    <svg class="contacts-list__icon-map" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-maps"></use>
+                    </svg>
+                    3123 S Grand Ave</a>
+                </div>
+    
+            </li>
+            <li class="contacts-list__item">
+                <img class="contacts-list__photo" 
+                    
+                    src="./images/cafe-ny-1px.jpg" 
+                    alt="фото кафе" width="270">
+
+                <div class="contacts-list__content">
+                    <p class="contacts-list__category contacts-list__category--rose">CAFE</p>
+                    <p class="contacts-list__city">New York</p>
+                    
+                    <a href="https://www.google.com.ua/maps/place/BORICUA'S+CAKE+%26+MORE+New+Jersey+%26+New+York/@40.7194688,-74.1859573,16.17z/data=!4m13!1m7!3m6!1s0x89c24fa5d33f083b:0xc80b8f06e177fe62!2z0J3RjNGOLdCZ0L7RgNC6LCDQodC_0L7Qu9GD0YfQtdC90ZYg0KjRgtCw0YLQuCDQkNC80LXRgNC40LrQuA!3b1!8m2!3d40.7127753!4d-74.0059728!3m4!1s0x89c25313d6cc7af5:0xe9104861c1349532!8m2!3d40.720634!4d-74.1883645?hl=uk&authuser=0"
+                        class="feedback-list__link feedback-list__link--modal link">
+                        <svg class="contacts-list__icon-map" width="16" height="16">
+                            <use href="./images/sprite.svg#icon-maps"></use>
+                        </svg>
+                        10 Vanderpool St, Newark</a>
+                </div>
+            </li>       
+    </div>
+</div>
