@@ -1,6 +1,7 @@
 .hero {
 	background-color: var(--background-main-color);
 	overflow: hidden;
+	margin-top: -1px;
 
 	@include tablet {
 		overflow: visible;
@@ -10,12 +11,17 @@
 .hero-container {
 	position: relative;
 	padding-top: 136px;
-	padding-bottom: 158px;
+	padding-bottom: 156px;
 	z-index: 5;
 
 	@include tablet {
 		padding-top: 20px;
 		padding-bottom: 45px;
+	}
+
+	@include desktop {
+		padding-top: 21px;
+		padding-bottom: 90px;
 	}
 }
 
@@ -38,6 +44,13 @@
 		width: 162px;
 	}
 
+	@include desktop {
+		font-size: 38px;
+		line-height: 1.16;
+		width: 277px;
+		margin-bottom: 24px;
+	}
+
 	&__word {
 		font-size: 48px;
 		line-height: 0.96;
@@ -49,6 +62,11 @@
 		line-height: 0.9;
 
 		letter-spacing: 0.04em;
+		}
+
+		@include desktop {
+			font-size: 58px;
+			line-height: .91;
 		}
 			}
 }
@@ -68,8 +86,18 @@
 	font-size: 8px;
 	line-height: 1.25;
 	text-align: center;
+	align-items: center;
 	&:not(:last-child) {
 		margin-right: 8px;
+	}
+
+	@include desktop {
+		width: 107px;
+		height: 40px;
+		padding-top: 10px;
+
+		font-size: 14px;
+		line-height: 1.29;
 	}
 
 	color: var(--main-text-color);
@@ -96,6 +124,10 @@
 	&:focus {
 		background-color: var(--accent-text-color);
 		color: var(--main-text-color);
+	}
+
+	@include desktop {
+		width: 138px;
 	}
 }
 
@@ -135,10 +167,16 @@
 	}
 
 	@include tablet {
-		left: 248px;
+		left: 260px;
 		top: -33px;
 		width: 335px;
 		height: 333px;
+	}
+
+	@include desktop {
+		width: 534px;
+		height: 534px;
+		left: 501px;
 	}
 }
 
@@ -161,8 +199,12 @@
 }
 
 	@include tablet {
-		left: 322px;
+		left: 325px;
 		top: 0px;
+	}
+
+	@include desktop {
+		left: 615px;
 	}
 }
 
@@ -176,10 +218,15 @@
 		@include tablet {
 			display: block;
 		}
+
+		@include desktop {
+			margin-right: 18px;
+		}
 	}
 
 	&__item {
 		text-align: right;
+		position: relative;
 
 		&:not(:last-child) {
 			margin-bottom: 16px;
@@ -198,21 +245,35 @@
 
 		color: var(--accent-text-color);
 
-		position: relative;
+		@include desktop {
+			font-size: 46px;
+			line-height: 1.15;
+		}
+
+
 
 		&::before {
 			content: " ";
 			position: absolute;
 
 			top: -2px;
-			left: 25px;
+			left: 35px;
 			width: 16px;
 			height: 16px;
 			border-radius: 50%;
 			background: var(--main-text-color);
 		
 			z-index: -1;
+
+			@include desktop {
+				width: 30px;
+				height: 30px;
+				top: -5px;
+				left: 60px;
 			}
+			}
+
+			
 		}
 
 &__text {
@@ -223,6 +284,11 @@ font-size: 8px;
 line-height: 10px;
 
 color: var(--main-text-color);
+
+@include desktop {
+	font-size: 14px;
+	line-height: 1.29;
+	}
 }
 }
 
@@ -231,6 +297,10 @@ color: var(--main-text-color);
 
 	&__text {
 		margin-bottom: 7px;
+
+		@include desktop {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__btn {
@@ -261,9 +331,17 @@ color: var(--main-text-color);
 		font-size: 8px;
 		line-height: 1.5;
 		margin-top: 61px;
-		margin-left: 152px;
+		margin-left: 160px;
 
 color: var(--main-text-color);
+	}
+
+	@include desktop {
+		margin-top: 108px;
+		margin-left: 214px;
+		width: 200px;
+		font-size: 14px;
+		line-height: 1.4;
 	}
 }
 
@@ -274,6 +352,10 @@ color: var(--main-text-color);
 		display: block;
 		position: absolute;
 		top: 164px;
+	}
+
+	@include desktop {
+		top: 260px;
 	}
 }
 
@@ -297,6 +379,10 @@ color: var(--main-text-color);
 				transform: translate(0px) rotate(360deg);
 			}
 		}
+
+		@include desktop {
+			top: 316px;
+			left: 874px;
+		}
 	}
 }
-
