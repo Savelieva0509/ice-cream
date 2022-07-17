@@ -16,35 +16,27 @@ new Swiper('.rewiews-slider', {
     pageUpDown: true,
   },
 
-  spaceBetween: 30,
   speed: 1000,
-
-  effect: 'flip',
-  flipEffect: {
-    slideShadows: true,
-    limitRotation: true,
-  },
+  autoheight: true,
 });
-
 
 // SCRIPT_CONTACTS_MODAL_LOCATION
 
 (() => {
   const refs = {
-    openLocationBtn: document.querySelector("[data-location-open]"),
-    closeLocation: document.querySelector("[data-location-close]"),
-    location: document.querySelector("[data-location]"),
+    openLocationBtn: document.querySelector('[data-location-open]'),
+    closeLocation: document.querySelector('[data-location-close]'),
+    location: document.querySelector('[data-location]'),
   };
 
-  refs.openLocationBtn.addEventListener("click", toggleLocation);
-  refs.closeLocationBtn.addEventListener("click", toggleLocation);
+  refs.openLocationBtn.addEventListener('click', toggleLocation);
+  refs.closeLocationBtn.addEventListener('click', toggleLocation);
 
   function toggleLocation() {
-    refs.location.classList.toggle("is-hidden");
+    refs.location.classList.toggle('is-hidden');
     refs.body.classList.toggle('no-scroll');
   }
-
-  })();
+})();
 
 // mob-menu
 (() => {
@@ -74,5 +66,4 @@ new Swiper('.rewiews-slider', {
     openMenuBtn.setAttribute('aria-expanded', false);
     bodyScrollLock.enableBodyScroll(document.body);
   });
-
 })();
