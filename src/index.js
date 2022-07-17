@@ -1,4 +1,4 @@
-// Swiper initialisation and setup
+// Swiper initialisation
 new Swiper('.rewiews-slider', {
   navigation: {
     nextEl: '.swiper-button-next',
@@ -9,40 +9,7 @@ new Swiper('.rewiews-slider', {
     el: '.swiper-pagination',
     clickable: true,
   },
-
-  keyboard: {
-    enabled: true,
-    onlyInViewport: true,
-    pageUpDown: true,
-  },
-
-  spaceBetween: 30,
-  speed: 1000,
-
-  effect: 'flip',
-  flipEffect: {
-    slideShadows: true,
-    limitRotation: true,
-  },
 });
-
-
-// SCRIPT_CONTACTS_MODAL_LOCATION
-
-(() => {
-  const refs = {
-    openLocationBtn: document.querySelector("[data-location-open]"),
-    closeLocation: document.querySelector("[data-location-close]"),
-    location: document.querySelector("[data-location]"),
-  };
-
-  refs.openLocationBtn.addEventListener("click", toggleLocation);
-  refs.closeLocationBtn.addEventListener("click", toggleLocation);
-
-  function toggleLocation() {
-    refs.location.classList.toggle("is-hidden");
-    refs.body.classList.toggle('no-scroll');
-  }
 
 // mob-menu
 (() => {
@@ -72,5 +39,4 @@ new Swiper('.rewiews-slider', {
     openMenuBtn.setAttribute('aria-expanded', false);
     bodyScrollLock.enableBodyScroll(document.body);
   });
-
 })();

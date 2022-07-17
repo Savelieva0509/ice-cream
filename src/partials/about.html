@@ -2,6 +2,9 @@
   <div class="container container--about">
     <label class="about__label">tradition and love</label>
     <h2 class="about__title">how it’s made?</h2>
+
+    <ul class="about__position">
+      <li class="about__title">
     <picture class="about__picture">
       <source
         srcset="./images/about1.png 1x, ./images/about1-2x.png 2x"
@@ -11,12 +14,13 @@
         src="./images/about1-2x.png"
         alt="корова"
         width="280"
-        height="### "
+        height="279"
       />
     </picture>
+    </li>
 
     <div class="about__background"></div>
-    
+    <li class="about__title">
     <p class="about__text">
       Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo
       cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at justo
@@ -32,10 +36,13 @@
     <p class="about__text-second">Aliquam erat volutpat. Aenean accumsan.</p>
     <button
       type="button"
-      class="big-button big-button--secondary"
-      data-modal-open
-    >
-      Read more
+      class="button__about"
+      data-modal-open>Read more
+      <svg class="big-buttom__icon" width="10" height="16">
+                <use href="./images/sprite.svg#icon-big-button"></use>
+            </svg>
     </button>
+    </li>
+    </ul>
   </div>
 </section>
