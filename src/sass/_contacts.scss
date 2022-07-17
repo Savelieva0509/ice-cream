@@ -226,9 +226,35 @@
                 opacity 250ms var(--timing-function),
                 visibility 250ms var(--timing-function);
 
-    max-width: 450px;
+ 
     margin-right: auto;
     margin-left: auto;
+
+    @media screen and (max-width: 319px) {
+            width: 98%;
+        } 
+      
+    @include mobile{
+        width: 70%;
+    }
+    
+}
+.local-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.local__item{
+    width: 100%;
+    
+        @media screen and (min-width: 768px) {
+            width: calc((100% - 30px) / 2);
+        }
+    
+        @media screen and (min-width: 1200px) {
+            width: calc((100% - 60px) / 3);
+        }
 }
 
 .contacts-modal__close-btn {
