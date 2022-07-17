@@ -1,7 +1,14 @@
 .header {
   padding-top: 8px;
-  padding-bottom: 8px;
   background-color: #ffb8ca;
+
+  @include tablet {
+    padding-top: 32px;
+  }
+
+  @include desktop {
+    padding-top: 40px;
+  }
 }
 
 .header__container {
@@ -25,12 +32,25 @@
   border: none;
   outline: none;
   display: block;
-  margin-left: auto;
 
-  @media screen and (min-width: 767.98px) {
-      display: none;
-    }
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+  }
+
+  @include tablet {
+    margin-left: 293px;
+  }
+
+  @include desktop {
+    display: none;
+  }
 }
+
+// .menu__open-btn--mob {
+//   @media screen and (max-width: 767px) {
+//     margin-left: auto;
+//   }
+// }
 
 .menu__open-icon {
   stroke: var(--accent-text-color);
@@ -56,6 +76,10 @@
 
   transform: translateX(100%);
   transition: transform 250ms var(--timing-function);
+
+  @include tablet {
+    width: 250px;
+  }
 }
 
 .menu-container.is-open {
@@ -88,11 +112,9 @@
   align-items: center;
   padding-top: 15px;
   padding-bottom: 15px;
-  width: 168px;
+  width: 210px;
   height: 44px;
-  margin-bottom: 20px;
-  margin-left: auto;
-  margin-right: auto;
+
   border: none;
   outline: none;
   padding: 0;
@@ -116,13 +138,50 @@
   &:focus {
     background-color: #ecebeb;
   }
+
+  &--mob {
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include tablet {
+      width: 186px;
+    }
+  }
+
+  &--tab {
+    @media screen and (max-width: 767px), (min-width: 1200px) {
+      display: none;
+    }
+
+    @include tablet {
+      display: block;
+      width: 160px;
+      margin-left: auto;
+    }
+  }
 }
 
 .menu__item {
-  border-top: 1px solid #e18298;
+  @media screen and (max-width: 767px) {
+    border-top: 1px solid #e18298;
+  }
+
+  @include desktop {
+    position: relative;
+    z-index: 10;
+  }
+
+  &:not(:last-child) {
+    @include desktop {
+      margin-right: 35px;
+    }
+  }
 
   &:last-child {
-    border-bottom: 1px solid #e18298;
+    @media screen and (max-width: 767px) {
+      border-bottom: 1px solid #e18298;
+    }
   }
 }
 
@@ -130,9 +189,13 @@
   display: block;
   padding: 12px 0px;
   font-family: var(--second-font-family);
-  @include font(700, 14px, 1.28, 0.03);
   color: var(--main-text-color);
   transition: color 250ms var(--timing-function);
+  @include font(700, 14px, 1.28, 0.03);
+
+  @include desktop {
+    @include font(700, 16px, 1.31, 0.03);
+  }
 
   &:hover,
   &:focus {
@@ -146,4 +209,13 @@
 
 .menu__link:focus.current {
   color: var(--main-text-color);
+}
+
+.menu__list--desktop {
+  display: flex;
+  margin-left: 128px;
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
