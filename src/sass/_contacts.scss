@@ -239,23 +239,7 @@
     }
     
 }
-.local-list{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
 
-.local__item{
-    width: 100%;
-    
-        @media screen and (min-width: 768px) {
-            width: calc((100% - 30px) / 2);
-        }
-    
-        @media screen and (min-width: 1200px) {
-            width: calc((100% - 60px) / 3);
-        }
-}
 
 .contacts-modal__close-btn {
     width: 30px;
