@@ -44,6 +44,8 @@ new Swiper('.rewiews-slider', {
     refs.body.classList.toggle('no-scroll');
   }
 
+  })();
+
 // mob-menu
 (() => {
   const mobileMenu = document.querySelector('.js-menu-container');
