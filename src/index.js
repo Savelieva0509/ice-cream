@@ -7,8 +7,10 @@
     location: document.querySelector('[data-location]'),
   };
 
-  refs.openLocationBtn.addEventListener('click', toggleLocation);
-  refs.closeLocationBtn.addEventListener('click', toggleLocation);
+
+  refs.openLocationBtn.addEventListener("click", toggleLocation);
+  refs.openLocationBtn.addEventListener("click", toggleLocation);
+
 
   function toggleLocation() {
     refs.location.classList.toggle('is-hidden');
@@ -16,32 +18,24 @@
   }
 })();
 
-// mob-menu
+
+// SCRIPT_CONTACTS_MODAL_FRANCHISE
+
 (() => {
-  const mobileMenu = document.querySelector('.js-menu-container');
-  const openMenuBtn = document.querySelector('.js-open-menu');
-  const closeMenuBtn = document.querySelector('.js-close-menu');
-
-  const toggleMenu = () => {
-    const isMenuOpen =
-      openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
-    openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
-    mobileMenu.classList.toggle('is-open');
-
-    const scrollLockMethod = !isMenuOpen
-      ? 'disableBodyScroll'
-      : 'enableBodyScroll';
-    bodyScrollLock[scrollLockMethod](document.body);
+  const refs = {
+    openFranchiseBtn: document.querySelector("[data-franchise-open]"),
+    closeFranchise: document.querySelector("[data-franchise-close]"),
+    franchise: document.querySelector("[data-franchise]"),
   };
 
-  openMenuBtn.addEventListener('click', toggleMenu);
-  closeMenuBtn.addEventListener('click', toggleMenu);
+  refs.openFranchiseBtn.addEventListener("click", toggleFranchise);
+  refs.openFranchiseBtn.addEventListener("click", toggleFranchise);
 
-  // Close the mobile menu on wider screens if the device orientation changes
-  window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
-    if (!e.matches) return;
-    mobileMenu.classList.remove('is-open');
-    openMenuBtn.setAttribute('aria-expanded', false);
-    bodyScrollLock.enableBodyScroll(document.body);
-  });
+  function toggleFranchise() {
+    refs.franchise.classList.toggle("is-hidden");
+    refs.body.classList.toggle('no-scroll');
+  }
 })();
+
+
+
