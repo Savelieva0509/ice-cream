@@ -6,7 +6,6 @@
         padding-top: 80px;
     }
 
-    // outline: 2px solid blue;
     background-image: linear-gradient(
         to bottom,
         var(--main-text-color) 0%,
@@ -43,7 +42,6 @@
 }
 
 .contacts-list__item {
-    // outline: 2px solid green;
     padding: 40px 32px;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
@@ -73,16 +71,15 @@
     color: var(--main-text-color);
     display: inline-block;
     margin-bottom: 20px;
+    padding: 0 20px;
 }
 
 .contacts-list__category--green {
     background-color: #C2E297;
-    min-width: 130px;
 }
 
 .contacts-list__category--rose {
     background-color: #F0D1A5;
-    min-width: 80px;
 }
 
 .contacts-list__city {
@@ -111,10 +108,8 @@
     }
 
     color: var(--description-text-color);
-    max-width: 250px;
 
     margin-bottom: 24px;
-    max-width: 500px;
     padding: 0;
 }
 
@@ -227,8 +222,8 @@
     overflow-y: auto;
 
     transition: transform 250ms var(--timing-function),
-                opacity 250ms var(--timing-function),
-                visibility 250ms var(--timing-function);
+        opacity 250ms var(--timing-function),
+        visibility 250ms var(--timing-function);
 
     max-width: 550px;
     height: auto;
@@ -236,31 +231,32 @@
     margin-left: auto;
 
     @include tablet {
-            transform: translate(-50%, -50%) scale(1) rotateZ(360deg);
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            width: 550px;
-            max-width: 550px;
+        transform: translate(-50%, -50%) scale(1) rotateZ(360deg);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 550px;
+        max-width: 550px;
 
-            .backdrop.is-hidden & {
-                    transform: translate(-50%, -50%) scale(0.4) rotateZ(270deg);
-                }
+        .backdrop.is-hidden & {
+            transform: translate(-50%, -50%) scale(0.4) rotateZ(270deg);
         }
-    
-        @include desktop {
-            width: 800px;
-            max-width: 800px;
-        }
+    }
 
-    >.container  {
+    @include desktop {
+        width: 800px;
+        max-width: 800px;
+    }
+
+    >.container {
         min-width: 320px;
-        
+        width: 100%;
+
         @include tablet {
             width: 550px;
-        } 
+        }
 
-        @include desktop{
+        @include desktop {
             width: 800px;
         }
     }
@@ -271,9 +267,10 @@
     @include font(400, 22px, 1.1, 0.04em);
     text-align: center;
     text-transform: uppercase;
-    
+
     color: var(--middle-accent-text-color);
     margin-bottom: 40px;
+
 }
 
 .contacts-modal__close-btn {
@@ -289,13 +286,13 @@
     align-items: center;
     justify-content: center;
     padding: 0;
-    color:var(--accent-text-color);
+    color: var(--accent-text-color);
 
     transition: fill 250ms var(--timing-function);
-    
+
     &:hover,
     &:focus {
-        background-color: var(--middle-accent-text-color) ;
+        background-color: var(--middle-accent-text-color);
     }
 }
 

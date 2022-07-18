@@ -1,6 +1,6 @@
 <section class="contacts">
     <div class="container">
-        <h2 class="contacts-title is-hidden">Contacts</h2>
+        <h2 class="contacts-title visually-hidden">Contacts</h2>
         <ul class="contacts-list list">
             <li class="contacts-list__item">
                 <p class="contacts-list__category contacts-list__category--rose"> CAFE</p>
@@ -10,11 +10,11 @@
                 <ul class="work-list list">
                     <li class="work-list__item">
                         <p class="work-list_days">Monday - Friday</p>
-                        <time class="work-list_time">06:00 AM - 10:00 PM</time>
+                        <p class="work-list_time">06:00 AM - 10:00 PM</p>
                     </li>
                     <li class="work-list__item">
                         <p class="work-list_days">Monday - Friday</p>
-                        <time class="work-list_time">08:00 AM - 16:00 PM</time>
+                        <p class="work-list_time">08:00 AM - 16:00 PM</p>
                     </li>
                 </ul>
                 <ul class="feedback-list list">
@@ -36,11 +36,11 @@
                 <ul class="work-list list">
                     <li class="work-list__item">
                         <p class="work-list_days">Monday - Friday</p>
-                        <time class="work-list_time">06:00 AM - 10:00 PM</time>
+                        <p class="work-list_time">06:00 AM - 10:00 PM</p>
                     </li>
                     <li class="work-list__item">
                         <p class="work-list_days">Monday - Friday</p>
-                        <time class="work-list_time">08:00 AM - 16:00 PM</time>
+                        <p class="work-list_time">08:00 AM - 16:00 PM</p>
                     </li>
                 </ul>
                 <ul class="feedback-list list">
@@ -62,11 +62,11 @@
                 <ul class="work-list list">
                     <li class="work-list__item">
                         <p class="work-list_days">Monday - Friday</p>
-                        <time class="work-list_time">06:00 AM - 10:00 PM</time>
+                        <p class="work-list_time">06:00 AM - 10:00 PM</p>
                     </li>
                     <li class="work-list__item">
                         <p class="work-list_days">Monday - Friday</p>
-                        <time class="work-list_time">08:00 AM - 16:00 PM</time>
+                        <p class="work-list_time">08:00 AM - 16:00 PM</p>
                     </li>
                 </ul>
                 <ul class="feedback-list list">
@@ -83,7 +83,7 @@
         </ul>
         <ul class="button-list list">
             <li class="button-list__item">
-                <button type="button" class="big-button big-button--primary button" data-location-open >Our Locations
+                <button type="button" class="big-button big-button--primary button" data-location-open>Our Locations
             <svg class="big-buttom__icon" width="10" height="16">
                 <use href="./images/sprite.svg#icon-big-button"></use>
             </svg>
@@ -103,7 +103,7 @@
 <!-- MODAL-LOCATION -->
 
 <div class="backdrop is-hidden" data-location>
-    <div class="contacts-modal contacts-modal--location">
+    <div class="contacts-modal">
         <div class="container">
             <h2 class="contacts-modal__title">welcome to taste</h2>
 <button type="button" class="contacts-modal__close-btn button" data-location-close>
@@ -111,6 +111,7 @@
         <use href="./images/sprite.svg#icon-close"></use>
     </svg>
 </button>
+
 
 <ul class="contacts-list-modal list">
     <li class="contacts-list__item contacts-list__item--modal">
@@ -140,11 +141,9 @@
                 </svg>
                 3123 S Grand Ave Street</a>
         </div>
-
     </li>
     <li class="contacts-list__item contacts-list__item--modal">
         <img class="contacts-list__photo" src="./images/cafe-ny-1px.jpg" alt="фото кафе" width="270">
-
         <div class="contacts-list__content">
             <p class="contacts-list__category contacts-list__category--rose">CAFE</p>
             <p class="contacts-list__city">New York</p>
@@ -157,13 +156,15 @@
                 10 Vanderpool Street</a>
         </div>
     </li>
+</ul>
+        </div>
     </div>
-    </div>
+</div>
 
-    <!-- MODAL-FRANCHISE -->
+<!-- MODAL-FRANCHISE -->
 
-    <div class="backdrop is-hidden" data-franchise>
-    <div class="contacts-modal contacts-modal--franchise">
+<div class="backdrop is-hidden" data-franchise>
+    <div class="contacts-modal">
         <div class="container">
             <h2 class="contacts-modal__title">Let's work together</h2>
             <button type="button" class="contacts-modal__close-btn button" data-franchise-close>
@@ -207,8 +208,6 @@
                     <p class="franchise-list__values">15-25% per month</p>
                     <p class="franchise-list__text">Profitability</p>
                 </li>
-
-
                 <li class="franchise-list__item">
                     <svg class="franchise-list__icon" width="35" height="45">
                         <use href="./images/sprite.svg#icon-investment"></use>
@@ -220,7 +219,6 @@
         </div>
     </div>
 </div>
-
 
 
 
