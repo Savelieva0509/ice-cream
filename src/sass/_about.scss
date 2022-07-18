@@ -2,7 +2,6 @@
   background-color: var(--background-middle-color);
 }
 
-
 .about__label {
   @include font(400, 18px, 1.17, 0.04em);
   font-family: var(--accent-font-family);
@@ -16,6 +15,7 @@
   @include tablet {
     @include font(400, 26px, 1.15, 0.04em);
   }
+
   @include desktop {
     @include font(400, 30px, 1.14, 0.04em);
   }
@@ -23,6 +23,7 @@
 
 .about__title {
   @include font(400, 34px, 1.15, 0.04em);
+  width: 100%;
   font-family: var(--accent-font-family);
   text-transform: uppercase;
   text-align: center;
@@ -34,6 +35,7 @@
     @include font(400, 48px, 1.15, 0.04em);
     margin-bottom: 40px;
   }
+
   @include desktop {
     @include font(400, 58px, 1.14, 0.04em);
     margin-bottom: 60px;
@@ -42,16 +44,17 @@
 
 .about__position {
   padding: 0;
-   position: relative;
-   margin-left: 0;
-     display: flex;
-     align-items: flex-start;
-     flex-direction: column;
+  position: relative;
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 
   @include tablet {
     flex-direction: row;
     justify-content: center;
   }
+
   @include desktop {
     flex-direction: row;
     justify-content: center;
@@ -60,16 +63,30 @@
 
 .about__picture {
   margin-bottom: 40px;
+  width: 100%;
+
+  @include mobile {
+    width: 280px;
+    height: 279px;
+  }
 }
 
 .about__background {
   position: absolute;
+
   top: 390px;
-  left: 20px;
-  height: 133px;
-  width: 280px;
+  z-index: 1;
+  left: 0;
+
+  max-width: 100%;
+  height: 100%;
   background-image: url(../images/about2.png);
   background-repeat: no-repeat;
+
+  @include mobile {
+    height: 133px;
+    width: 280px;
+  }
 
   @include tablet {
     display: none;
@@ -78,35 +95,51 @@
   @include desktop {
     top: 0;
     height: 1200px;
-   width: 521px;
+    width: 521px;
   }
 }
 
 .about__text {
-  @include font(500, 12px, 1.58, 0.04em);
+  @include font(500, 12px, 1.58, 0.02em);
   font-family: var(--second-font-family);
   color: var(--description-title-color);
-  margin-bottom: 40px;
-  width: 220px;
+  margin-bottom: 30px;
+  width: 100%;
   text-align: left;
+  text-transform: none;
+  z-index: 10;
+  position: relative;
+
+  @include mobile {
+    width: 220px;
+  }
+
   @include tablet {
     width: 334px;
   }
+
   @include desktop {
     width: 463px;
   }
 }
 
 .about__text-second {
-  @include font(500, 12px, 1.58, 0.04em);
+  @include font(500, 12px, 1.58, 0.02em);
   font-family: var(--second-font-family);
   color: var(--description-text-color);
   margin-bottom: 20px;
-  width: 220px;
- text-align: left;
+  width: 100%;
+  text-align: left;
+  text-transform: none;
+
+  @include mobile {
+    width: 230px;
+  }
+
   @include tablet {
     width: 334px;
   }
+
   @include desktop {
     width: 463px;
   }
@@ -129,8 +162,6 @@
   border-radius: 22px;
   border: none;
   padding: 10px 17px;
-  margin-left: auto;
-  margin-right: auto;
 
   & .big-buttom__icon {
     fill: var(--accent-text-color);
@@ -140,6 +171,3 @@
 .big-buttom__icon {
   margin-left: 8px;
 }
-
-
- 
