@@ -242,17 +242,20 @@
             top: 50%;
             width: 550px;
             max-width: 550px;
+
+            .backdrop.is-hidden & {
+                    transform: translate(-50%, -50%) scale(0.4) rotateZ(270deg);
+                }
         }
     
         @include desktop {
             width: 800px;
             max-width: 800px;
         }
-    
-        .backdrop.is-hidden & {
-            transform: translate(-50%, -50%) scale(0.4) rotateZ(270deg);
-        }
+
     >.container  {
+        min-width: 320px;
+        
         @include tablet {
             width: 550px;
         } 
@@ -262,8 +265,6 @@
         }
     }
 }
-
-// MODAL-LOCATION
 
 .contacts-modal__title {
     font-family: 'Titan One';
@@ -364,14 +365,14 @@
     margin-bottom: 16px;
 
     @include tablet {
-           width: 40px;
-           height: 40px;
-        }
+        width: 40px;
+        height: 40px;
+    }
     
         @include desktop {
             width: 45px;
             height: 45px;
-        }
+    }
 }
 
 .franchise-list__values {

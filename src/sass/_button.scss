@@ -23,12 +23,21 @@
             min-width: 198px;
         }
 
-    & .big-buttom__icon {
-        fill: var(--main-text-color);
-    }
-
         margin-right: auto;
         margin-left: auto;
+
+        transition: color 250ms var(--timing-function),
+        background-color 250ms var(--timing-function);
+
+        &:hover,
+        &:focus {
+            color: var(--accent-text-color);
+            background-color: #ffffff;
+        }
+}
+
+.big-button--primary>.big-buttom__icon {
+    fill: currentColor;
 }
 
 .big-button--secondary {
@@ -42,12 +51,21 @@
             min-width: 180px;
         }
 
-    & .big-buttom__icon {
-        fill: var(--accent-text-color);
-    }
-
         margin-right: auto;
         margin-left: auto;
+
+    transition: color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function);
+
+    &:hover,
+    &:focus {
+        color:#ffffff;
+        background-color:var(--accent-text-color);
+    } 
+}
+
+.big-button--secondary>.big-buttom__icon {
+    fill: currentColor;
 }
 
 .big-buttom__icon {
