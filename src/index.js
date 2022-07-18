@@ -1,27 +1,3 @@
-// Swiper initialisation
-new Swiper('.rewiews-slider', {
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-
-  keyboard: {
-    enabled: true,
-    onlyInViewport: true,
-    pageUpDown: true,
-  },
-
-  speed: 1000,
-  autoheight: true,
-});
-
-
-
 // SCRIPT_CONTACTS_MODAL_LOCATION
 
 (() => {
@@ -39,7 +15,6 @@ new Swiper('.rewiews-slider', {
     refs.body.classList.toggle('no-scroll');
   }
 })();
-
 
 // mob-menu
 (() => {
