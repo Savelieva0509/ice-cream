@@ -46,12 +46,6 @@
   }
 }
 
-// .menu__open-btn--mob {
-//   @media screen and (max-width: 767px) {
-//     margin-left: auto;
-//   }
-// }
-
 .menu__open-icon {
   stroke: var(--accent-text-color);
   transition: stroke 250ms var(--timing-function);
@@ -217,5 +211,325 @@
 
   @media screen and (max-width: 1199px) {
     display: none;
+  }
+}
+
+// модалка
+.backdrop-modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: opacity 300ms, visibility 300ms;
+  overflow-y: scroll;
+  z-index: 10;
+}
+
+// .is-hidden {
+//   visibility: hidden;
+//   opacity: 0;
+//   pointer-events: none;
+// }
+
+.modal-product {
+  height: 580px;
+  width: 95vw;
+  max-width: 425px;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: 300ms;
+
+  background-color: var(--main-text-color);
+  border-radius: 10px;
+}
+
+.backdrop.is-hidden .modal-product {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.modal-product__close-btn {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: block;
+  outline: transparent;
+}
+
+.modal-product__close-icon {
+  stroke: var(--accent-text-color);
+}
+
+.modal-product__title {
+  font-family: 'Titan One';
+  @include font(400, 20px, 1.15, 0.04em);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--accent-text-color);
+  margin-bottom: 75px;
+  @include desktop {
+    font-size: 24px;
+  }
+}
+
+.product-form__list {
+  display: flex;
+  margin: -5px;
+}
+
+.product-form__item {
+  width: 100%;
+  width: calc((100% - 2 * 5px) / 3);
+  margin: 5px;
+}
+
+.product-form__wrap {
+  margin-bottom: 7px;
+}
+
+.product-form__item {
+  position: relative;
+}
+
+.product-form__text {
+  border-radius: 7px;
+  display: block;
+  width: 100%;
+  height: 50px;
+  margin-top: auto;
+  margin-bottom: 10px;
+  font-family: 'Titan One';
+  @include font(400, 12px, 1.15, 0.04em);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--description-title-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 15px;
+  }
+}
+
+.modal-img {
+  width: 80px;
+  height: 80px;
+  background-size: contain;
+  position: absolute;
+  bottom: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.img-icecream {
+  background-image: url(../images/products1-small.png);
+
+  @include retina {
+    background-image: url(../images/products1-small@2x.png);
+  }
+}
+
+.img-icecoffee {
+  background-image: url(../images/products2-small.png);
+
+  @include retina {
+    background-image: url(../images/products2-small@2x.png);
+  }
+}
+
+.img-milkshake {
+  background-image: url(../images/products3-small.png);
+
+  @include retina {
+    background-image: url(../images/products3-small@2x.png);
+  }
+}
+
+.icecream-text {
+  background-color: #ffb8ca;
+}
+
+.coffee-text {
+  background-color: #f0d1a5;
+}
+
+.milkshake-text {
+  background-color: #c2e297;
+}
+
+.product-form__input-product {
+  width: 100%;
+  padding-left: 10px;
+  border: 1px solid var(--description-title-color);
+  transition: border-color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    border-color: var(--accent-text-color);
+  }
+}
+
+.product-form__group {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.product-form__group-title {
+  font-family: 'Titan One';
+  @include font(400, 12px, 1.15, 0.04em);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--description-title-color);
+  margin-bottom: 25px;
+
+  @include desktop {
+    font-size: 14px;
+  }
+}
+
+.product-form__group-list {
+  display: flex;
+  justify-content: center;
+  margin: -5px;
+}
+
+.product-form__group-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  width: calc((100% - 2 * 5px) / 3);
+  margin: 5px;
+}
+
+.product-form__btn-input {
+  margin-bottom: 4px;
+}
+
+.product-form__btn-label {
+  @include font(700, 13px, 1.52, 0.04em);
+  color: var(--description-title-color);
+  display: inline-block;
+  position: relative;
+
+  @include desktop {
+    font-size: 16px;
+  }
+
+  &::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 110%;
+    border: 2px solid var(--description-title-color);
+    border-radius: 50%;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    border-color: var(--accent-text-color);
+  }
+}
+
+.product-form__btn-input:focus + .product-form__btn-label::before {
+  border-color: var(--accent-text-color);
+}
+
+.product-form__btn-input:checked + .product-form__btn-label::before {
+  border-color: var(--description-title-color);
+  background-color: var(--accent-text-color);
+}
+
+.product-form__field-list {
+  margin-bottom: 20px;
+}
+
+.product-form__field-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.product-form__form-label {
+  @include font(700, 14px, 1.52, 0.04em);
+  color: var(--accent-text-color);
+
+  @include desktop {
+    font-size: 16px;
+  }
+}
+
+.product-form__input-product {
+  width: 100%;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid var(--description-title-color);
+  padding: 5px 10px;
+  @include font(500, 14px, 1.76, 0.04em);
+  color: var(--accent-text-color);
+  text-align: center;
+  outline: none;
+
+  @include desktop {
+    font-size: 16px;
+  }
+}
+
+.product-form__input {
+  width: 100%;
+  height: 35px;
+  border-radius: 10px;
+  border: 1px solid var(--description-title-color);
+  padding: 5px 10px;
+  @include font(500, 14px, 1.76, 0.04em);
+  color: var(--accent-text-color);
+  outline: none;
+  transition: border-color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    border-color: var(--accent-text-color);
+  }
+
+  @include desktop {
+    font-size: 16px;
+  }
+}
+
+.modal-product__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 44px;
+  margin-left: auto;
+  margin-right: auto;
+
+  border: none;
+  outline: none;
+  padding: 0;
+  border-radius: 22px;
+  background: var(--accent-text-color);
+  @include font(700, 16px, 1.31, 0.04em);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--main-text-color);
+
+  transition: background-color 250ms var(--timing-function),
+    color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+    color: var(--accent-text-color);
   }
 }
