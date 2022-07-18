@@ -51,7 +51,7 @@
   min-height: 308px;
   margin-bottom: 16px;
 
-  background: #fafafa;
+  background-color: #fafafa;
 
   @include tablet {
     width: 620px;
@@ -76,13 +76,15 @@
   max-width: 100%;
   min-height: 248px;
   width: 180px;
+  background-color: #fafafa;
 
-  background-image: repeating-linear-gradient(
-    #ffffff,
-    #ffffff 30px,
-    #e1e1e1 30px,
-    #e1e1e1 31px
-  );
+ background-image: repeating-linear-gradient(
+        to bottom, 
+        #fafafa, 
+        #fafafa 28px, 
+        #E1E1E1 28px,
+        #E1E1E1 30px
+        );
 
   &::before {
     content: '';
