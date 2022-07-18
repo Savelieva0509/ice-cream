@@ -4,16 +4,41 @@
   background-image: linear-gradient(
     to bottom,
     var(--background-middle-color) 0px,
-    var(--background-middle-color) 87.5px,
-    var(--main-text-color) 87.5px,
-    var(--main-text-color) 256px
+    var(--background-middle-color) 41%,
+    var(--main-text-color) 41%,
+    var(--main-text-color) 100%
   );
+  @include tablet {
+    background-image: linear-gradient(
+      to bottom,
+      var(--background-middle-color),
+      var(--main-text-color)
+    );
+  }
+  @include desktop {
+    background-image: linear-gradient(
+      to bottom,
+      var(--background-middle-color) 0px,
+      var(--background-middle-color) 33%,
+      var(--main-text-color) 33%,
+      var(--main-text-color) 100%
+    );
+    margin: auto;
+    padding: 120px 94px;
+  }
 }
 
 .img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.roundcorner {
+  border-radius: 8px;
+  @include tablet {
+    border-radius: 20px;
+  }
 }
 
 .gallery-list {
@@ -30,29 +55,104 @@
 
   &__thumb {
     margin: 1.25px;
+    transition: transform 300ms var(--timing-function);
+    &:hover,
+    &:focus {
+      transform: scale(2);
+    }
+
+    @include tablet {
+      margin: 3px;
+    }
+
+    @include desktop {
+      margin: 4px;
+    }
   }
 
-  &__item:first-child {
+  &__thumb--first {
     margin-left: 0;
+    @include desktop {
+      margin-top: -10px;
+    }
+    @media screen and (min-width: 0px) {
+      &:hover,
+      &:focus {
+        transform: translate(25px) scale(2);
+      }
+    }
+
+    @media screen and (min-width: 767.98px) {
+      &:hover,
+      &:focus {
+        transform: translate(50px) scale(2);
+      }
+    }
+
+    @media screen and (min-width: 1199.98px) {
+      &:hover,
+      &:focus {
+        transform: translate(0) scale(2);
+      }
+    }
   }
 
-  &__item:last-child {
+  &__thumb--last {
     margin-right: 0;
+    margin-top: 7px;
+    @include desktop {
+      margin-top: 15px;
+    }
+    @media screen and (min-width: 0px) {
+      &:hover,
+      &:focus {
+        transform: translate(-25px) scale(2);
+      }
+    }
+
+    @media screen and (min-width: 767.98px) {
+      &:hover,
+      &:focus {
+        transform: translate(-50px) scale(2);
+      }
+    }
+
+    @media screen and (min-width: 1199.98px) {
+      &:hover,
+      &:focus {
+        transform: translate(0) scale(2);
+      }
+    }
   }
 
-  &__item:nth-child(2) {
+  &__wrapper:nth-child(2) {
     margin-top: 10px;
+    @include desktop {
+      margin-top: 20px;
+    }
   }
 
-  &__item:nth-child(4) {
+  &__wrapper:nth-child(3) {
+    @include desktop {
+      margin-top: -15px;
+    }
+  }
+
+  &__wrapper:nth-child(4) {
     margin-top: 20px;
+    @include desktop {
+      margin-top: 40px;
+    }
   }
 
-  &__item:nth-child(5) {
+  &__wrapper:nth-child(5) {
     margin-top: -5px;
-  }
 
-  &__item:nth-child(6) {
-    margin-top: 10px;
+    @include tablet {
+      margin-top: -35px;
+    }
+    @include desktop {
+      margin-top: -25px;
+    }
   }
 }
