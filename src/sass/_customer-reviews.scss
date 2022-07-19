@@ -78,13 +78,13 @@
   width: 180px;
   background-color: #fafafa;
 
- background-image: repeating-linear-gradient(
-        to bottom, 
-        #fafafa, 
-        #fafafa 28px, 
-        #E1E1E1 28px,
-        #E1E1E1 30px
-        );
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #fafafa,
+    #fafafa 28px,
+    #e1e1e1 28px,
+    #e1e1e1 30px
+  );
 
   &::before {
     content: '';
@@ -204,6 +204,11 @@
     background: url(../images/home-24.8.png);
     background-size: cover;
   }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  z-index: 5;
 }
 
 .swiper-button-next::after,
