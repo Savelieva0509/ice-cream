@@ -1,15 +1,12 @@
 .about {
     background-color: var(--background-middle-color);
     padding-top: 55px;
-    padding-bottom: 40px;
   
     @include tablet {
       padding-top: 60px;
-      padding-bottom: 60px;
     }
     @include desktop {
       padding-top: 60px;
-      padding-bottom: 40px;
     }
     }
 

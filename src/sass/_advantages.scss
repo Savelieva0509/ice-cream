@@ -1,5 +1,14 @@
 .advantages {
   background-color: var(--background-middle-color);
+  padding-top: 40px;
+
+  @include tablet{
+    padding-top: 60px;
+  }
+  
+     @include desktop {
+       padding-top: 40px;
+     }
 }
 .ingredients {
   padding: 0;
