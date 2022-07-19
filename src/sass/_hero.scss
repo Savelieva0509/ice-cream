@@ -1,28 +1,30 @@
+
+
+
 .hero {
 	background-color: var(--background-main-color);
 	overflow: hidden;
 	margin-top: -1px;
 
+	padding-top: 136px;
+	padding-bottom: 156px;
+
 	@include tablet {
 		overflow: visible;
+
+		padding-top: 20px;
+		padding-bottom: 44px;
+	}
+
+	@include desktop {
+		padding-top: 34px;
+		padding-bottom: 90px;
 	}
 }
 
 .hero-container {
 	position: relative;
-	padding-top: 136px;
-	padding-bottom: 156px;
 	z-index: 5;
-
-	@include tablet {
-		padding-top: 20px;
-		padding-bottom: 45px;
-	}
-
-	@include desktop {
-		padding-top: 21px;
-		padding-bottom: 90px;
-	}
 }
 
 .hero-title {
@@ -133,7 +135,7 @@
 
 .circle {
 	position: absolute;
-	top: 25px;
+	top: -110px;
 	left: 36px;
 	width: 346px;
 	height: 344px;
@@ -167,8 +169,8 @@
 	}
 
 	@include tablet {
-		left: 260px;
-		top: -33px;
+		left: 250px;
+		top: -58px;
 		width: 335px;
 		height: 333px;
 	}
@@ -176,14 +178,15 @@
 	@include desktop {
 		width: 534px;
 		height: 534px;
-		left: 501px;
+		left: 521px;
+		top: -68px;
 	}
 }
 
 .hero-block__ice {
 	position: absolute;
 	left: 119px;
-	top: 34px;
+	top:  -99px;
 	z-index: -1;
 
 	animation: ice 1500ms linear;
@@ -199,8 +202,8 @@
 }
 
 	@include tablet {
-		left: 325px;
-		top: 0px;
+		left: 322px;
+		top: -20px;
 	}
 
 	@include desktop {
@@ -351,11 +354,12 @@ color: var(--main-text-color);
 	@include tablet {
 		display: block;
 		position: absolute;
-		top: 164px;
+		top: 147px;
+		left: 32px;
 	}
 
 	@include desktop {
-		top: 260px;
+		top: 246px;
 	}
 }
 
@@ -365,14 +369,14 @@ color: var(--main-text-color);
 	@include tablet {
 		display: block;
 		position: absolute;
-		left: 560px;
-		top: 186px;
+		left: 546px;
+		top: 166px;
 
 		animation: girl 1500ms linear;
 
 		@keyframes girl {
 			0% {
-				transform: translateX(210px) rotate(0deg);
+				transform: translateY(150px) rotate(0deg);
 			}
 			
 			100% {
@@ -381,8 +385,8 @@ color: var(--main-text-color);
 		}
 
 		@include desktop {
-			top: 316px;
-			left: 874px;
+			top: 295px;
+			left: 880px;
 		}
 	}
 }
