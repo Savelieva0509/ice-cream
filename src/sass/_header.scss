@@ -16,16 +16,16 @@
   align-items: center;
 }
 
-.backdrop {
-  width: 100vw;
-  height: 100%;
-  position: fixed;
-  background-color: rgba(95, 93, 93, 0.288);
-  position: fixed;
-  top: 0;
-  transition: opacity 300ms, visibility 300ms;
-  overflow-y: scroll;
-}
+// .backdrop {
+//   width: 100vw;
+//   height: 100%;
+//   position: fixed;
+//   background-color: rgba(95, 93, 93, 0.288);
+//   position: fixed;
+//   top: 0;
+//   transition: opacity 300ms, visibility 300ms;
+//   overflow-y: scroll;
+// }
 
 .menu__open-btn {
   background-color: transparent;
