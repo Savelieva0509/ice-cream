@@ -84,6 +84,10 @@
   transform: translateX(0);
 }
 
+.menu-container:not(.is-open) {
+  visibility: hidden;
+}
+
 .menu__close-btn {
   background-color: transparent;
   border: none;
