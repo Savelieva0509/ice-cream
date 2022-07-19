@@ -196,6 +196,11 @@
 
   background: #d9d9d9;
   opacity: 1;
+
+  &:focus {
+    outline: solid 1px rgba(212, 20, 67, 1);
+    // background: rgba(212, 20, 67, 0.3);
+  }
 }
 
 .swiper-pagination-horizontal.swiper-pagination-bullets
