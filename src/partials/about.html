@@ -1,11 +1,19 @@
-<section class="about" id="about">
+<section class="about">
   <div class="container container--about">
     <label class="about__label">tradition and love</label>
-    <h2 class="about__title">how it’s made?</h2>
+    <h2 class="about__title-first">how it’s made?</h2>
 
-    <ul class="about__position">
-      <li class="about__title">
+    <ul class="about__position list">
+      <li class="about__item-first">
         <picture>
+          <source
+            srcset="./images/about-desk.png 1x, ./images/about-desk-2x.png 2x"
+            media="(min-width: 1200px)"
+          />
+          <source
+            srcset="./images/about-tab.png 1x, ./images/about-tab-2x.png 2x"
+            media="(min-width: 768px)"
+          />
           <source
             srcset="./images/about1.png 1x, ./images/about1-2x.png 2x"
             media="(min-width: 320px)"
@@ -18,8 +26,8 @@
         </picture>
       </li>
 
-      <div class="about__background"></div>
-      <li class="about__title">
+           <div class="about__background"></div>
+      <li class="about__item-second">
         <p class="about__text">
           Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo
           cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at
@@ -31,6 +39,7 @@
           suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh,
           tincidunt.
         </p>
+
         <p class="about__text-second">
           Aliquam erat volutpat. Aenean accumsan.
         </p>
