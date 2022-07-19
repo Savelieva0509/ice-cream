@@ -1,7 +1,9 @@
 .rewiews {
+  font-family: 'DM Sans';
   @include font(500, 12px, 2.58, 0);
   color: var(--description-title-color);
   text-align: center;
+  background: #ffffff;
 }
 
 .rewiews-slider {
@@ -11,12 +13,15 @@
 
 .rewiews-slider__wrap {
   margin-bottom: 16px;
+
+  @include tablet {
+    margin-bottom: 32px;
+  }
 }
 
 .rewiew-card {
-  @media screen and (max-width: 320px) {
-    max-width: 100%;
-  }
+  max-width: 100%;
+  z-index: 10;
 
   display: flex;
   flex-direction: column;
@@ -24,41 +29,72 @@
 }
 
 .rewiew-card__image {
-  margin: 0 auto 62px;
+  margin: 0 auto 32px;
   max-width: 100%;
   height: auto;
   display: block;
+
+  @include tablet {
+    margin-bottom: 20px;
+  }
 }
 
 .rewiew-card__wrap {
   position: relative;
-  z-index: -2;
-  max-width: 100%;
-  min-height: 217px;
-  padding: 0 12px;
-  margin-bottom: 34px;
-  background-image: repeating-linear-gradient(
-    #ffffff,
-    #ffffff 30px,
-    #e1e1e1 30px,
-    #e1e1e1 31px
-  );
+  z-index: -3;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 280px;
+  min-height: 308px;
+  margin-bottom: 16px;
+
+  background-color: #fafafa;
+
+  @include tablet {
+    width: 620px;
+    min-height: 164px;
+    margin-bottom: 4px;
+  }
+
+  @include desktop {
+    width: 968px;
+    min-height: 138px;
+    margin-bottom: 16px;
+  }
 }
 
 .rewiew-card__text {
-  margin: 0 auto;
-  padding: 0 6px;
-  max-width: 157px;
-  text-indent: 3px;
+  position: relative;
+  z-index: -2;
+
+  margin-top: 44px;
+  padding: 0 8px 0 16px;
+
+  max-width: 100%;
+  min-height: 248px;
+  width: 180px;
+  background-color: #fafafa;
+
+ background-image: repeating-linear-gradient(
+        to bottom, 
+        #fafafa, 
+        #fafafa 28px, 
+        #E1E1E1 28px,
+        #E1E1E1 30px
+        );
 
   &::before {
     content: '';
     position: absolute;
     z-index: -1;
     top: -13px;
-    left: 4px;
+    left: 3px;
     display: inline-block;
 
+    max-width: 100%;
     width: 54px;
     height: 40px;
 
@@ -68,17 +104,54 @@
       background: url(../images/quotes-108.png);
       background-size: cover;
     }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      top: -17px;
+      left: 0px;
+      width: 60.35px;
+      height: 40px;
+
+      background-image: url(../images/quotes-60.png);
+
+      @include retina {
+        background: url(../images/quotes-120.png);
+        background-size: cover;
+      }
+    }
+
+    @include desktop {
+      top: -15px;
+      left: 0px;
+    }
+  }
+
+  @include tablet {
+    width: 608px;
+    min-height: 93px;
+    padding: 0 50px 0 44px;
+    @include font(null, 14px, 2.16, 0.04em);
+  }
+
+  @include desktop {
+    width: 821px;
+    min-height: 62px;
+    padding: 0 36px;
+    @include font(null, 16px, 1.86, null);
   }
 }
 
 .rewiew-card__subtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   @include font(500, 14px, 1.86, null);
   color: var(--description-title-color);
 
   &::before {
     content: '';
-    margin: 0 auto 20px;
     display: block;
+    margin-bottom: 20px;
 
     width: 32px;
     height: 4px;
@@ -90,11 +163,24 @@
     );
     background-size: 12px 4px;
     background-position: 50% 50%;
+
+    @include tablet {
+      margin-bottom: 16px;
+    }
+  }
+
+  @include tablet {
+    @include font(null, 16px, 1.86, null);
+  }
+
+  @include desktop {
+    font-size: 20px;
   }
 }
 
 .swiper-pagination {
   position: static;
+  line-height: 1;
 }
 
 .swiper-pagination-bullet {

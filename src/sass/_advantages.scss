@@ -1,20 +1,35 @@
 .advantages {
   background-color: var(--background-middle-color);
-  padding-bottom: 60px;
 }
 .ingredients {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  @media screen and (min-width: 768px) {
+    & {
+      display: flex;
+      flex-direction: row;
+    }
+  }
   &__item:not(:last-child) {
     margin-bottom: 32px;
   }
-
+  @media screen and (min-width: 768px) {
+    &__item:not(:last-child) {
+      margin-right: 4px;
+      margin-bottom: 0;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &__item:not(:last-child) {
+      margin-right: 115px;
+      margin-bottom: 0;
+    }
+  }
   &__title {
     font-family: var(--accent-font-family);
-    width: 98px;
-    height: 56px;
+    width: 100%;
+
     font-weight: 400;
     font-size: 36px;
     line-height: calc(41 / 36);
@@ -23,16 +38,58 @@
     margin-bottom: 4px;
     color: var(--accent-text-color);
   }
+  @media screen and (min-width: 320px) {
+    &__title {
+      height: 56px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    &__title {
+      margin-bottom: 13px;
+      height: 56px;
+      font-size: 48px;
+      line-height: calc(55 / 48);
+      text-transform: none;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &__title {
+      margin-bottom: 16px;
+      font-size: 58px;
+      height: 65px;
+      line-height: calc(66 / 58);
+      text-transform: none;
+    }
+  }
   &__text {
     font-family: var(--second-font-family);
-    width: 230px;
+    width: 100%;
     font-weight: 700;
     font-size: 12px;
     line-height: calc(20 / 12);
 
     color: var(--description-title-color);
   }
-
+  @media screen and (min-width: 320px) {
+    &__text {
+      width: 230px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    &__text {
+      width: 180px;
+      font-size: 14px;
+      line-height: calc(24 / 14);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &__text {
+      width: 288px;
+      font-size: 16px;
+      line-height: calc(28 / 16);
+      letter-spacing: 0.02em;
+    }
+  }
   &__item::before {
     display: block;
     content: '';
@@ -42,7 +99,16 @@
 
     background-repeat: no-repeat;
   }
-
+  @media screen and (min-width: 768px) {
+    &__item::before {
+      margin-bottom: 36px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &__item::before {
+      margin-bottom: 40px;
+    }
+  }
   &__milk:before {
     background-image: url('../images/milk-ingredients.png');
   }

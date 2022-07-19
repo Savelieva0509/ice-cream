@@ -1,3 +1,4 @@
+
 // Swiper initialisation
 new Swiper('.rewiews-slider', {
   navigation: {
@@ -30,7 +31,9 @@ new Swiper('.rewiews-slider', {
 })();
 
 
+
 // SCRIPT_CONTACTS_MODAL_LOCATION
+
 
 (() => {
   const refs = {
