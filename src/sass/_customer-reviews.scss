@@ -28,6 +28,13 @@
   align-items: center;
 }
 
+.rewiew-card__thumb {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
 .rewiew-card__image {
   margin: 0 auto 32px;
   max-width: 100%;
@@ -206,6 +213,16 @@
   }
 }
 
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next,
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {
+  transform: scale(0.66);
+}
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next,
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {
+  transform: scale(1);
+}
+
 .swiper-button-next,
 .swiper-button-prev {
   z-index: 5;
@@ -215,4 +232,12 @@
 .swiper-button-prev::after {
   color: var(--accent-text-color);
   font-size: 50px;
+}
+
+.swiper-horizontal
+  > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+  transform: none;
+  margin-left: auto;
+  margin-right: auto;
 }
