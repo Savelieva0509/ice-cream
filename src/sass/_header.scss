@@ -66,13 +66,17 @@
   padding-top: 60px;
   padding-left: 20px;
   padding-right: 20px;
-  z-index: 10;
+  z-index: 15;
 
   transform: translateX(100%);
   transition: transform 250ms var(--timing-function);
 
   @include tablet {
-    width: 250px;
+    width: 35vw;
+  }
+
+  @include desktop {
+    display: none;
   }
 }
 
@@ -144,7 +148,7 @@
   }
 
   &--tab {
-    @media screen and (max-width: 767px), (min-width: 1200px) {
+    @media screen and (max-width: 767.98px) {
       display: none;
     }
 
