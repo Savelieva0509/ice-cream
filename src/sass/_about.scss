@@ -12,6 +12,10 @@
       padding-bottom: 40px;
     }
     }
+
+    .about__container {
+      position: relative;
+    }
   
   
   .about__label {
@@ -56,8 +60,8 @@
   
   .about__position {
     padding: 0;
-    position: relative;
-    margin: 0;
+    
+    
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -67,8 +71,9 @@
       justify-content: center;
     }
     @include desktop {
-      
+      flex-direction: row;
       align-items: flex-start;
+      
     }
   }
   
@@ -77,7 +82,7 @@
     width: 100%;
       width: 280px;
       height: 279px;
-    
+    display: block;
     @include tablet {
       width: 336px;
       height: 335px;
@@ -87,51 +92,64 @@
       width: 501px;
       height: 501px;
       margin-bottom: 0;
+      margin-right: 0;
     }
   }
   
   .about__item-first {
-    display: block;
+    display: flex;
   
     @include tablet {
       margin-right: 32px;
     }
     @include desktop {
-      
-      margin-right: 99px;
-      
+      margin-right: 99px; 
   }
+}
   
   .about__item-second {
     @include desktop {
       margin-top: 90px;
     }
   }
+
+
   
   .about__background {
     position: absolute;
-    top: 398px;
+    margin: 0 auto;
+    top: 540px;
     z-index: 1;
-    left: 0;
-    max-width: 100%;
-    height: 100%;
-    background-image: url(../images/about2.png);
+    left: 20;
+    
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
-  
-    @include mobile {
-      height: 133px;
-      width: 280px;
+    background-image: url(../images/about2.png);
+    @include retina {
+      background-image:url(../images/about2-2x.png);
     }
+
+    height: 133px;
+    width: 280px;
+    max-width: 767px;
+     
     @include tablet {
       display: none;
     }
   
     @include desktop {
-      top: 0;
+      display: inline-block;
+      z-index: 1;
+      top: 200;
+      left: 0;
       height: 521px;
       width: 100%;
       max-width: 1600px;
       background-image: url(../images/milk-desk.png);
+    }
+    @include retina {
+      background-image:url(../images/milk-desk-2x.png);
     }
   }
   
@@ -154,6 +172,8 @@
     @include desktop {
       width: 463px;
       @include font(500, 16px, 1.76, 0.04em);
+      z-index: 10;
+    position: relative;
     }
   }
   
@@ -179,10 +199,8 @@
   
   .button__about {
     font-family: 'DM Sans';
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 18px;
-    letter-spacing: 0.06em;
+    @include font(700, 14px, 1.29, 0.06em);
+  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -194,13 +212,33 @@
     border-radius: 22px;
     border: none;
     padding: 10px 17px;
-    
+    @include tablet {
+      @include font(700, 16px, 1.31, 0.06em);
+    }
+    @include desktop {
+      @include font(700, 16px, 1.31, 0.06em);
+    }
   
     & .big-buttom__icon {
       fill: var(--accent-text-color);
     }
+
+    transition: color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function);
+
+    &:hover,
+    &:focus {
+        color: #ffffff;
+        background-color: var(--accent-text-color);
+    }
   } 
+
 
   .big-buttom__icon {
     margin-left: 8px;
+
+    .button__about:hover &,
+    .button__about:focus & {
+      fill: #ffffff;
+    }
   }
