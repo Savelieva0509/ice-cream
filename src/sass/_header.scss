@@ -433,6 +433,7 @@
     bottom: 110%;
     border: 2px solid var(--description-title-color);
     border-radius: 50%;
+    transition: border-color 250ms var(--timing-function);
   }
 
   &:hover::before,
