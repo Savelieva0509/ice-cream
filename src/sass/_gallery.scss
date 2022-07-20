@@ -28,6 +28,17 @@
   }
 }
 
+.picture-girl{
+  width: 44px;
+
+  @include tablet{
+    width: 105px;
+  }
+
+  @include desktop{
+    width: 138px;
+  }
+}
 
 .roundcorner {
   border-radius: 8px;
