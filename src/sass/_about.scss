@@ -27,13 +27,13 @@
       background-position: top 236px center, center ;
     background-size: 1200px, auto;
     background-repeat: no-repeat;
-    background-image: url(../images/milk-desk.png),
+    background-image: url(../images/milk-desk-min.png),
     linear-gradient(
         rgb(255,245,246),
         rgb(255,245,246));
     }
     @include retina {
-      background-image: url(../images/milk-desk-2x.png),
+      background-image: url(../images/milk-desk-2x-min.png),
     linear-gradient(
         rgb(255,245,246),
         rgb(255,245,246));
