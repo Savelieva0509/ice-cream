@@ -1,5 +1,6 @@
 .about {
     padding-top: 55px;
+
     
     background-position: top 589px center, center ;
     background-size: 280px, auto;
@@ -30,14 +31,15 @@
     linear-gradient(
         rgb(255,245,246),
         rgb(255,245,246));
-
+    }
     @include retina {
       background-image: url(../images/milk-desk-2x.png),
     linear-gradient(
         rgb(255,245,246),
         rgb(255,245,246));
-    }
-    }
+
+      }
+    
     }
 
    

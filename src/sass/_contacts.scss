@@ -60,7 +60,16 @@
     }
 }
 
-.contacts-list__category {
+.category-thumb {
+    padding-bottom: 24px;
+
+    @include tablet {
+    padding-bottom: 32px;
+    }
+    border-bottom: 1px solid #E1E1E1;
+}
+
+.category-thumb__name {
     @include font(500, 12, 1.8, 0.04em);
 
     @include tablet {
@@ -74,15 +83,15 @@
     padding: 0 20px;
 }
 
-.contacts-list__category--green {
+.category-thumb__name--green {
     background-color: #C2E297;
 }
 
-.contacts-list__category--rose {
+.category-thumb__name--rose {
     background-color: #F0D1A5;
 }
 
-.contacts-list__city {
+.category-thumb__city {
     @include font(500, 12, 1.8, 0.04em);
 
         @include tablet {
@@ -96,7 +105,7 @@
     margin-bottom: 8px;
 }
 
-.contacts-list__text {
+.category-thumb__text {
     @include font(500, 12, 1.5, 0.04em);
 
         @include tablet {
@@ -108,16 +117,15 @@
     }
 
     color: var(--description-text-color);
-
-    margin-bottom: 24px;
     padding: 0;
 }
 
 .work-list {
-    border-top: 1px solid #E1E1E1;
     border-bottom: 1px solid #E1E1E1;
     padding: 24px 0;
-    margin-bottom: 24px;
+    @include tablet {
+        padding: 32px 0;
+    }
 }
 
 .work-list__item+.work-list__item {
@@ -148,6 +156,14 @@
             }
 
     color: var(--middle-accent-text-color);
+}
+
+.feedback-list {
+    padding-top: 24px;
+    
+    @include tablet {
+        padding-top: 32px;
+    }
 }
 
 .feedback-list__link {
@@ -301,6 +317,8 @@
 .contacts-modal__close-icon {
     fill: currentColor;
 }
+
+// MODAL-LOCATION
 
 .contacts-list-modal {
     @include tablet {

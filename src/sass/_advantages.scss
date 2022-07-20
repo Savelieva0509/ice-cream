@@ -1,5 +1,14 @@
 .advantages {
   background-color: var(--background-middle-color);
+  padding-top: 40px;
+
+  @include tablet{
+    padding-top: 60px;
+  }
+  
+     @include desktop {
+       padding-top: 40px;
+     }
 }
 .ingredients {
   padding: 0;
@@ -11,6 +20,8 @@
       flex-direction: row;
     }
   }
+
+  
   &__item:not(:last-child) {
     margin-bottom: 32px;
   }
@@ -19,11 +30,19 @@
       margin-right: 4px;
       margin-bottom: 0;
     }
+    &__item:nth-child(2) {
+      margin-right: 22px;
+    }
+
+        
   }
   @media screen and (min-width: 1200px) {
     &__item:not(:last-child) {
       margin-right: 115px;
       margin-bottom: 0;
+    }
+    &__item:nth-child(2) {
+      margin-right: 80px;
     }
   }
   &__title {
