@@ -96,12 +96,12 @@ color: #D41443;
     
 
     border-radius: 24px;
-    // &:not(:last-child){
-    //     @media screen and(max-width:767.99px) {
-    //         margin-bottom: 60px;
-    //     }
+    &:not(:last-child){
+        @media screen and(max-width:767.99px) {
+            margin-bottom: 60px;
+        }
        
-    // }
+    }
     &:nth-child(1){
         background: #FFB8CA;
 
