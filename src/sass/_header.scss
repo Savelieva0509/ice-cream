@@ -69,7 +69,6 @@
   z-index: 15;
 
   transform: translateX(100%);
-  transition: transform 250ms var(--timing-function);
 
   @include tablet {
     width: 38%;
@@ -82,9 +81,11 @@
 
 .menu-container.is-open {
   transform: translateX(0);
+  transition: transform 250ms var(--timing-function);
 }
 
 .menu-container:not(.is-open) {
+  transition: 250ms var(--timing-function);
   visibility: hidden;
 }
 
